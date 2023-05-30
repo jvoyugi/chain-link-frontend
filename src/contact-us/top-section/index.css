@@ -1,0 +1,124 @@
+.top-section {
+    background: #F6F8FB;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.left-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    padding: 10px;
+}
+
+.right-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-section-header {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 50px;
+    font-family: 'DM Sans', sans-serif;
+    color: #2CB34A;
+    letter-spacing: -0.5px;
+    text-align: center;
+
+}
+
+.top-section-body {
+    font-style: normal;
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    opacity: 0.6;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 40px;
+    color: #2CB34A;
+}
+
+.section-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.section-footer-row {
+    width: 30%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.icon {
+    color: #2CB34A;
+    text-align: center;
+}
+
+.icon-large {
+    color: #2CB34A;
+    text-align: center;
+    size: large;
+}
+
+.section-footer-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icon {
+    margin: 20px;
+}
+
+.form-message {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    color: #0F001A;
+}
+
+.email-subscriber-input {
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    font-family: 'Futura PT', sans-serif;
+    font-size: 16px;
+    border: none;
+    height: 30px;
+    background: #E9F8FB;
+    border-radius: 5px;
+}
+
+.top-section-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscribe-button {
+    width: 160px;
+    margin: 10px;
+    padding: 14px;
+    font-family: 'Futura PT', sans-serif;
+    font-size: 16px;
+    color: #2CB34A;
+    background: #FFFFFF;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+}
