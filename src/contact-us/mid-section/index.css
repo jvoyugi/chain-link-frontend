@@ -1,0 +1,117 @@
+.contact-page {
+    background: #FFFFFF;
+    padding: 10px;
+}
+
+.page-header {
+    width: 100%;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.01em;
+    color: #2CB34A;
+}
+
+.underline {
+    width: 323.37px;
+    height: 3.36px;
+    background: #2CB34A;
+    border-radius: 2px;
+    margin: auto;
+}
+
+.main-content {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.section {
+    width: 50%;
+    padding: 20px;
+}
+
+.section-header {
+    width: 537.6px;
+    height: 73.86px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 22px;
+    color: #0F001A;
+}
+
+.section-body {
+    width: 613px;
+    height: 159px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 40px;
+    color: #0F001A;
+}
+
+.section-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.section-footer-row {
+    width: 30%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.icon {
+    color: #2CB34A;
+    text-align: center;
+}
+
+.icon-large {
+    color: #2CB34A;
+    text-align: center;
+    size: large;
+}
+
+.section-footer-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icon {
+    margin: 20px;
+}
+
+.form-message {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    color: #0F001A;
+}
+
+.form-input {
+    width: 90%;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Futura PT', sans-serif;
+    font-size: 16px;
+}
+
+.submit-button {
+    background: #2CB34A;
+    width: 93%;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Futura PT', sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 500;
+    border: none;
+}
