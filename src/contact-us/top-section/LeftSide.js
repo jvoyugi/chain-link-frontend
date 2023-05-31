@@ -9,14 +9,16 @@ export const LeftSide = () => {
             <div className='top-section-body'>
                 By subscribing you agree to terms of service
             </div>
-            <div className="top-section-form">
-                <div>
-                    <input type="email" className="email-subscriber-input" placeholder="Enter your email" name='email' id='email' required />
+            <form>
+                <div className="top-section-form">
+                    <div>
+                        <input type="email" className="email-subscriber-input" placeholder="Enter your email" name='email' id='email' required />
+                    </div>
+                    <div>
+                        <button type="submit" className="subscribe-button">Subscribe</button>
+                    </div>
                 </div>
-                <div>
-                    <button type="submit" className="subscribe-button">Subscribe</button>
-                </div>
-            </div>
+            </form>
         </div>
     )
 }
