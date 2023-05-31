@@ -95,12 +95,13 @@
     margin: 10px;
     padding: 10px;
     width: 200px;
-    font-family: 'Futura PT', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     border: none;
     height: 30px;
-    background: #E9F8FB;
+    background: #9A5757;
     border-radius: 5px;
+    color: #FFFFFF;
 }
 
 .top-section-form {
