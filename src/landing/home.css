@@ -1,0 +1,89 @@
+.body {
+    background-image : linear-gradient(rgb(40, 202, 247),rgb(102, 195, 245));
+    color :-webkit-validation-bubble-arrow;
+    background:cover;
+    height: 280px;
+}
+.navbar {
+    padding-top: 2%;
+    padding-left: 5%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar ul{
+    float:left;
+    list-style:none;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size:  15px;
+    color: rgb(40, 142, 45);
+}
+.navbar li{
+    float:left;
+    list-style:none;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size:  15px;
+    color: rgb(40, 142, 45);
+}
+
+.button {
+    height: 10px;
+    max-width: 10px;
+}            
+.btn btn-success{
+    height: 5%;
+}
+.row {
+    padding-top: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 10rem;
+    background-image : linear-gradient(rgb(56, 208, 250),rgb(102, 195, 245));
+    height: 300px;
+}
+.card-title1 {
+    font-style: oblique;
+    color: rgb(93, 209, 93);
+    text-align: center;
+    font-size: 155%;
+      
+}
+.card-text1 {
+    font-size:medium;
+    text-align: center;
+    font-size: 19px;
+    color: rgb(93, 209, 93);
+
+}
+.background2 {
+    border-image-width: 50px;
+  
+}
+
+.products {
+        background-image : linear-gradient(rgb(43, 202, 247),rgb(102, 195, 245));
+        padding-top: 20px;
+}
+
+.products p{
+    font-size: 15px;
+    background: transparent;
+    color: rgb(74, 200, 245);
+    
+}
+.card-img-top {
+       height: 120px;
+    
+}
+.logo{
+    float:right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 170px;
+    height: 70px;;
+  }
+  
+  
+  
