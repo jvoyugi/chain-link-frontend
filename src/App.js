@@ -5,7 +5,6 @@ import Home from './landing/Home';
 function App() {
   return (
     <>
-      <ContactUs />
       <Home />
     </>
   );
