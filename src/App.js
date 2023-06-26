@@ -1,5 +1,7 @@
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-
+import ContactUs from './contact-us/ContactUs';
+import Nav from './common/Nav';
 import Home from './landing/Home';
 import About from "./contact-us/ContactUs";
 import Solutions from "./our-solutions/solutions";
@@ -9,16 +11,10 @@ import { Routes,BrowserRouter as Router,Route } from "react-router-dom";
 
 function App() {
   return (
- <>
-     <Router>
-      <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/solutions" element={<Solutions />} />
-          <Route path="/contact" element={<Contact />} />
-      </Routes>
-     </Router>
- </>
+    <BrowserRouter>
+      <Nav />
+      <Home />
+    </BrowserRouter>
   );
 }
 
