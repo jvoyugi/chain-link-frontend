@@ -1,4 +1,4 @@
-.top-section {
+.topSection {
     background: #F6F8FB;
     position: relative;
     padding: 10px;
@@ -7,7 +7,7 @@
 }
 
 
-.left-section {
+.leftSection {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@
     padding: 10px;
 }
 
-.right-section {
+.rightSection {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@
     align-items: center;
 }
 
-.top-section-header {
+.topSectionHeader {
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
@@ -37,7 +37,7 @@
 
 }
 
-.top-section-body {
+.topSectionBody {
     font-style: normal;
     font-family: 'DM Sans', sans-serif;
     text-align: center;
@@ -48,12 +48,12 @@
     color: #2CB34A;
 }
 
-.section-footer {
+.sectionFooter {
     display: flex;
     flex-direction: row;
 }
 
-.section-footer-row {
+.sectionFooterRow {
     width: 30%;
     font-style: normal;
     font-weight: 500;
@@ -66,24 +66,24 @@
     text-align: center;
 }
 
-.icon-large {
+.iconLarge {
     color: #2CB34A;
     text-align: center;
     size: large;
 }
 
-.section-footer-icons {
+.sectionFooterIcons {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.footer-icon {
+.footerIcon {
     margin: 20px;
 }
 
-.form-message {
+.formMessage {
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -91,7 +91,7 @@
     color: #0F001A;
 }
 
-.email-subscriber-input {
+.emailSubscriberInput {
     margin: 10px;
     padding: 10px;
     width: 200px;
@@ -104,14 +104,14 @@
     color: #FFFFFF;
 }
 
-.top-section-form {
+.topSectionForm {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.subscribe-button {
+.subscribeButton {
     width: 160px;
     margin: 10px;
     padding: 14px;

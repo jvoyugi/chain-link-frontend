@@ -1,9 +1,9 @@
-.contact-page {
+.contactPage {
     background: #FFFFFF;
     padding: 10px;
 }
 
-.page-header {
+.pageHeader {
     width: 100%;
     text-align: center;
     font-style: normal;
@@ -22,7 +22,7 @@
     margin: auto;
 }
 
-.main-content {
+.mainContent {
     margin-top: 30px;
     display: flex;
     flex-direction: row;
@@ -33,7 +33,7 @@
     padding: 20px;
 }
 
-.section-header {
+.sectionHeader {
     width: 537.6px;
     height: 73.86px;
     font-style: normal;
@@ -43,7 +43,7 @@
     color: #0F001A;
 }
 
-.section-body {
+.sectionBody {
     width: 613px;
     height: 159px;
     font-style: normal;
@@ -53,12 +53,12 @@
     color: #0F001A;
 }
 
-.section-footer {
+.sectionFooter {
     display: flex;
     flex-direction: row;
 }
 
-.section-footer-row {
+.sectionFooterRow {
     width: 30%;
     font-style: normal;
     font-weight: 500;
@@ -71,24 +71,24 @@
     text-align: center;
 }
 
-.icon-large {
+.iconLarge {
     color: #2CB34A;
     text-align: center;
     size: large;
 }
 
-.section-footer-icons {
+.sectionFooterIcons {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.footer-icon {
+.footerIcon {
     margin: 20px;
 }
 
-.form-message {
+.formMessage {
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -96,7 +96,7 @@
     color: #0F001A;
 }
 
-.form-input {
+.formInput {
     width: 90%;
     margin: 10px;
     padding: 10px;
@@ -104,7 +104,7 @@
     font-size: 16px;
 }
 
-.submit-button {
+.submitButton {
     background: #2CB34A;
     width: 93%;
     margin: 10px;
