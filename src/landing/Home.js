@@ -1,9 +1,11 @@
 import React from "react";
+import Nav from "../common/Nav";
 import './home.css';
 
 const Home = () => {
   return (
     <>
+    <Nav/>
       <div class="row">
         <div class="col-sm-6">
           <div class="card">
