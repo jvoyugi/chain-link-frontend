@@ -11,7 +11,6 @@ import Footer from '../common/Footer';
 const ContactUs = () => {
     return (
         <>
-            <Nav/>
             <TopSection />
             <MidSection />
             <Location/>
