@@ -1,0 +1,117 @@
+.contactPage {
+    background: #FFFFFF;
+    padding: 10px;
+}
+
+.pageHeader {
+    width: 100%;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.01em;
+    color: #2CB34A;
+}
+
+.underline {
+    width: 323.37px;
+    height: 3.36px;
+    background: #2CB34A;
+    border-radius: 2px;
+    margin: auto;
+}
+
+.mainContent {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.section {
+    width: 50%;
+    padding: 20px;
+}
+
+.sectionHeader {
+    width: 537.6px;
+    height: 73.86px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 22px;
+    color: #0F001A;
+}
+
+.sectionBody {
+    width: 613px;
+    height: 159px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 40px;
+    color: #0F001A;
+}
+
+.sectionFooter {
+    display: flex;
+    flex-direction: row;
+}
+
+.sectionFooterRow {
+    width: 30%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.icon {
+    color: #2CB34A;
+    text-align: center;
+}
+
+.iconLarge {
+    color: #2CB34A;
+    text-align: center;
+    size: large;
+}
+
+.sectionFooterIcons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerIcon {
+    margin: 20px;
+}
+
+.formMessage {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    color: #0F001A;
+}
+
+.formInput {
+    width: 90%;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Futura PT', sans-serif;
+    font-size: 16px;
+}
+
+.submitButton {
+    background: #2CB34A;
+    width: 93%;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Futura PT', sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 500;
+    border: none;
+}
