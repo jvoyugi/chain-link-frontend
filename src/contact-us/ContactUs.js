@@ -10,7 +10,7 @@ import Nav from '../common/Nav';
 const ContactUs = () => {
     return (
         <>
-            <Nav/>
+            <Nav navLinkItem="contact"/>
             <TopSection />
             <MidSection />
             <Location/>
