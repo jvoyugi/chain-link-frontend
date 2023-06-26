@@ -3,19 +3,30 @@ import React from "react";
 import './home.css';
 import Nav from "../common/Nav";
 
-const home = () => {
+const Home = () => {
     return (
-      <>
+        <body>
   <div class ="body">
-        <Nav/>  
-        <div className="row">
-            <div className="col-sm-6">
-              <div className="card">
-                <div className="card-body">
-                  <h5 className="card-title1">Sales And Supply Chain Link For Your Business</h5>
-                  <p className="card-text1">The All in one view and solution to track you business income, expenditure in real time.</p>
-                  <button type="button" className="btn btn-success btn-sm">Request For Free Trial</button>
-                  <button type="button" className="btn btn-success btn-sm">Discover Video</button>
+    <div class="navbar"> 
+        <img src="image.jpg/logo4.png" alt="logo" class="logo" style="padding-right: 0px;"/>
+        <ul><p><h4>Chain Link Tech</h4></p></ul>
+        
+       <navbar>
+          <li><a href="homepage">Home</a></li>
+          <li><a href="aboutUs">About us</a></li>
+          <li><a href="solutions">Solutions</a></li>
+          <li><a href="contactUs">Contact us</a></li>
+          <li><a href="#" class="button" class5 ="btn btn-success">Log in</a></li>
+        </navbar>
+      </div>   
+        <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title1">Sales And Supply Chain Link For Your Business</h5>
+                  <p class="card-text1">The All in one view and solution to track you business income, expenditure in real time.</p>
+                  <button type="button" class="btn btn-success btn-sm">Request For Free Trial</button>
+                  <button type="button" class="btn btn-success btn-sm">Discover Video</button>
                 </div>
               </div>
               </div>
@@ -73,5 +84,5 @@ const home = () => {
      </>    
     )
 }
-export default home;
+export default Home;
 
