@@ -1,5 +1,5 @@
 import React from 'react';
-import "./topSection.css";
+import "./TopSection.css";
 import product_image from "../productImage.jpg";
 
 const TopSection = ({ props }) => {

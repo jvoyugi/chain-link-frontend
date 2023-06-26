@@ -1,7 +1,7 @@
 import React from 'react';
-import "./index.css";
-import { LeftSide } from './LeftSide';
-import { RightSide } from './RightSide';
+// import "./index.css";
+// import { LeftSide } from './LeftSide';
+// import { RightSide } from './RightSide';
 
 
 const MidSection = () => {
@@ -12,8 +12,8 @@ const MidSection = () => {
                 <div className='underline'></div>
             </div>
             <div className='main-content'>
-                <LeftSide />
-                <RightSide />
+                {/*<LeftSide />*/}
+                {/*<RightSide />*/}
             </div>
         </div>
     )

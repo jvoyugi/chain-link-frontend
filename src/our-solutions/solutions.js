@@ -4,7 +4,7 @@ import Nav from '../common/Nav';
 
 import MidSection from './mid-section/MidSection';
 import TopSection from './top-section/TopSection';
-import Location from './location/Location';
+// import Location from './location/Location';
 import Footer from '../common/Footer';
 
 
@@ -14,7 +14,7 @@ const ContactUs = () => {
             <Nav/>
             <TopSection />
             <MidSection />
-            <Location/>
+            {/*<Location/>*/}
             <Footer/>
         </>
     )
