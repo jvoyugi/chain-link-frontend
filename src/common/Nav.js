@@ -1,5 +1,6 @@
 import React from "react";
 import logo from './image.svg';
+import { Link } from "react-router-dom";
 import './nav.css';
 
 const Nav = () => {
@@ -10,22 +11,17 @@ const Nav = () => {
                 ChainLink
             </div>
             <div className="nav-links">
-                <div className="nav-link-item">
-                    Home
-                </div>
-                <div className="nav-link-item">
-                    About us
-                </div>
-                <div className="nav-link-item">
-                    Our solutions
-                </div>
-                <div className="nav-link-item">
-                    Contact us
-                </div>
+
+                <Link to="/" className="nav-link-item">Home</Link>
+                <Link to="/about" className="nav-link-item">About us</Link>
+                <Link to="/solutions" className="nav-link-item">Our solutions</Link>
+                <Link to="/contact" className="nav-link-item">Contact us</Link>
+
             </div>
             <div className="navbar-login-link">
                 <button type="button" class="navbar-login-button">Login</button>
             </div>
+
         </div>
 
     )
