@@ -10,12 +10,12 @@ const TopSection = ({ props }) => {
                     OUR PRODUCTS AND SOLUTIONS
                 </div>
                 <div className='top-section-body'>
-                    The sales supply chain-link
+                    The right sales supply chain-link for your business
                 </div>
             </div>
 
             <div className="right-section">
-                <img src={product_image} width={500} alt="Application Preview" />
+                <img src={product_image} width={500} alt="chainLink" />
             </div>
 
         </div>
