@@ -17,7 +17,7 @@ import "./MidSection.css";
 const MidSection = () => {
     return (
         <div className="solutions-page">
-            <div className="page-header">
+            <div className="row-header">
                 Ultimate Features in one dashboard
                 <div className='underline'></div>
             </div>
