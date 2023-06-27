@@ -1,6 +1,8 @@
 import React from "react";
 import Nav from "../common/Nav";
+import "bootstrap/dist/css/bootstrap.css" 
 import './home.css';
+import salesimage from "./images/sales.jpeg"
 
 const Home = () => {
   return (
@@ -37,7 +39,7 @@ const Home = () => {
           </div>
           <div className="col">
             <div className="card">
-              <img src="image.jpg/sales.jpeg" className="card-img-top" alt="image" />
+              <img src={salesimage} className="card-img-top" alt="image" />
               <div className="card-body">
                 <h6 className="card-title">Point of Sale</h6>
                 <p className="card-text">Management of sales and realtime payment solutions</p>
