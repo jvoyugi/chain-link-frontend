@@ -1,17 +1,17 @@
 import React from 'react';
-import "./index.css";
+import styles from "./MidSection.module.css";
 import { LeftSide } from './LeftSide';
 import { RightSide } from './RightSide';
 
 
 const MidSection = () => {
     return (
-        <div className="contact-page">
-            <div className="page-header">
+        <div className={styles.contactPage}>
+            <div className={styles.pageHeader}>
                 Get In Touch
-                <div className='underline'></div>
+                <div className={styles.underline}></div>
             </div>
-            <div className='main-content'>
+            <div className={styles.mainContent}>
                 <LeftSide />
                 <RightSide />
             </div>
