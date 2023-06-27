@@ -1,23 +1,23 @@
 import React from 'react';
 import "./BottomSection.css";
-import product_image from "../productImage.jpg";
 
 const BottomSection = ({ props }) => {
     return (
-        <div className="top-section">
-            <div className="left-section">
-                <div className='top-section-header'>
-                    OUR PRODUCTS AND SOLUTIONS
-                </div>
-                <div className='top-section-body'>
-                    The sales supply chain-link
-                </div>
+        // <div className=" section-header mt-5 mb-5 text-center align-content-center justify-content-center">
+        //     <div className="section-header mt-5 mb-5 text-center align-content-center justify-content-center">
+        //         Meet the Exciting Features of our Solution
+        //         <div className='underline'></div>
+        //     </div>
+        //     <div className='main-content'>
+        //         {/*<LeftSide />*/}
+        //         {/*<RightSide />*/}
+        //     </div>
+        // </div>
+        <div className="solutions-page">
+            <div className="page-header">
+                Meet the Exciting Features of our Solution
+                <div className='underline'></div>
             </div>
-
-            <div className="right-section">
-                <img src={product_image} width={500} alt="Application Preview" />
-            </div>
-
         </div>
     )
 };
