@@ -14,7 +14,7 @@ const BottomSection = ({ props }) => {
         //     </div>
         // </div>
         <div className="solutions-page">
-            <div className="page-header">
+            <div className="row-header">
                 Meet the Exciting Features of our Solution
                 <div className='underline'></div>
             </div>

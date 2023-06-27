@@ -1,6 +1,7 @@
  import React from 'react';
 import Data from "./Data";
 import "./MidSection.css";
+ import styles from "../../contact-us/mid-section/MidSection.module.css";
 
  const Scards = (props) => {
      return (
@@ -21,6 +22,7 @@ const MidSection = () => {
                 Ultimate Features in one dashboard
                 <div className='underline'></div>
             </div>
+
 
             <section>
                     <div className="mt-5 mb-5 text-center">
