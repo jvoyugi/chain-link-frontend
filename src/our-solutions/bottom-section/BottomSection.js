@@ -1,6 +1,9 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./BottomSection.css";
 import solution from "../theSolution.jpg"
+
+import styles from './BottomSection.css';
 import benefit1 from "../pic.jpg"
 import benefit2 from "../pic5.jpg"
 import benefit3 from "../pic2.jpg"
@@ -15,7 +18,7 @@ const BottomSection = ({ props }) => {
                             <div className='underline'></div>
                         </div>
                     </div>
-                    <div className="row gy-5 d-flex align-items-center justify-content-evenly mt-0 myRow">
+                    <div className="row gy-5 d-flex align-items-center justify-content-evenly mt-0 BottomSectionRow">
                         <div className="col-md-4 col-lg-3 text-center">
                             <div className="box_border position-relative rounded pt-5 pb-3 px-3 borderBottom shadow">
                                 <div className="shp"></div>
@@ -41,8 +44,6 @@ const BottomSection = ({ props }) => {
 
 
         </div>
-
-
 
             <section className="sec_2 flex">
                 <div className="sec_bg py-5">

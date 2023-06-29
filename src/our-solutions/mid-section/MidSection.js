@@ -1,7 +1,7 @@
  import React from 'react';
 import Data from "./Data";
+ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./MidSection.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
  const Scards = (props) => {
      return (
@@ -29,7 +29,7 @@ const MidSection = () => {
                         <p className="display-6 mb-1 row-header">Ultimate Features in one dashboard</p>
                         <div className='underline'></div>
                     </div>
-                    <div className="row d-sm-flex items-align-center justify-content-between myRow" style={rowStyle}>
+                    <div className="row d-sm-flex items-align-center justify-content-between BottomSectionRow" style={rowStyle}>
                         {
                             Data.map((val, ind) => {
 

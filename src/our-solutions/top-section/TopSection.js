@@ -1,7 +1,7 @@
 import React from 'react';
-import "./TopSection.css";
-import product_image from "../productImage.jpg";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./TopSection.module.css";
+import product_image from "../productImage.jpg";
 
 const TopSection = ({ props }) => {
     return (

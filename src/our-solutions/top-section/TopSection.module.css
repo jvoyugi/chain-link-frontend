@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
 }
-.top-section {
+.top{
     background: #F6F8FB;
     display: flex;
     flex-direction: row-reverse;
