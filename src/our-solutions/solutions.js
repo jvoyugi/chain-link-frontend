@@ -12,23 +12,21 @@ const Solutions = () => {
     return (
         <>
             <div className="grid-container d-flex flex-column" >
-            <div className="col-md-12">
-                <Nav/>
+            <div className="flex">
+                <Nav navLinkItem="solutions"/>
             </div>
-                <div className="component" >
-            <div className="col-md-12">
+            <div className="">
                 <TopSection />
             </div>
-            <div className="col-md-12">
+            <div className="">
                 <BottomSection/>
             </div>
-            <div className="col-md-12 mb-5">
+            <div className=" mb-5">
                 <MidSection />
             </div>
                 </div>
-            <div className="col-md-12 mt-5">
+            <div className=" mt-5">
                 <Footer/>
-            </div>
             </div>
         </>
     )
