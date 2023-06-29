@@ -3,33 +3,44 @@ import Nav from "../common/Nav";
 import "bootstrap/dist/css/bootstrap.css" 
 import './home.css';
 import salesimage from "./images/sales.jpeg"
+import inventoryimage from "./images/inventory.jpeg"
+import procureimage from "./images/procure.jpeg"
+import reportsimage from "./images/Reports.jpeg"
+import chartsimage from "./images/charts.jpg"
 
 const Home = () => {
   return (
     <>
     <Nav/>
+    <div class = "container">
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-md-6">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title1">Sales And Supply Chain Link For Your Business</h5>
               <p class="card-text1">The All in one view and solution to track you business income, expenditure in real time.</p>
+              
               <button type="button" class="btn btn-success btn-sm">Request For Free Trial</button>
-              <button type="button" class="btn btn-success btn-sm">Discover Video</button>
+     
             </div>
           </div>
         </div>
-        <div className="col-sm-6">
+        <div className="col-md-6">
           <div className="card">
-            <img src="image.jpg/supply1.jpg" alt="image" className="image" style={{ "height": "180px" }} />
+          <div class="card-body">
+            <img src={chartsimage} alt="image" className="image" style={{ "height": "140px", "width": "530px" }} />
+          </div>
           </div>
         </div>
       </div>
-      <div class="products">
-        <div className="row row-cols-3 row-cols-md-4 g-3">
+      
+          <p style={{ textAlign:"center" }}>Our Products Offering.</p>
+          
+    <div class="products">
+        <div className="row row-cols-1 row-cols-md-4 g-1">
           <div className="col">
             <div className="card">
-              <img src="image.jpg/inventory.jpeg" className="card-img-top" alt="image" />
+              <img src= {procureimage} className="card-img-top" alt="image" />
               <div className="card-body">
                 <h6 className="card-title">Procurement</h6>
                 <p className="card-text">Order sourcing and supplies debt management.</p>
@@ -37,6 +48,7 @@ const Home = () => {
               </div>
             </div>
           </div>
+          
           <div className="col">
             <div className="card">
               <img src={salesimage} className="card-img-top" alt="image" />
@@ -49,7 +61,7 @@ const Home = () => {
           </div>
           <div className="col">
             <div className="card">
-              <img src="image.jpg/Reports.jpeg" className="card-img-top" alt="image" />
+              <img src= {reportsimage} className="card-img-top" alt="image" />
               <div className="card-body">
                 <h6 className="card-title">Real-time dashboards</h6>
                 <p className="card-text">View all reports and profits made from different products.</p>
@@ -59,7 +71,7 @@ const Home = () => {
           </div>
           <div className="col">
             <div className="card">
-              <img src="image.jpg/procure.jpeg" className="card-img-top" alt="image" />
+              <img src={inventoryimage} className="card-img-top" alt="image" />
               <div className="card-body">
                 <h6 className="card-title">Inventory Management</h6>
                 <p className="card-text">Real time stock management and stock value reports.</p>
@@ -69,6 +81,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+    </div>
     </>
   )
 }
