@@ -1,12 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./TopSection.module.css";
+import "./TopSection.css";
 import product_image from "../productImage.jpg";
 
 const TopSection = ({ props }) => {
     return (
         <>
-        <section className="p-1 text-center text-sm-start top-section">
+        <section className="p-1 text-center text-sm-start top">
             <div className="container">
                 <div className="d-sm-flex align-items-center justify-content-between">
                     <div className="intro-text1 my-5 p-1">
