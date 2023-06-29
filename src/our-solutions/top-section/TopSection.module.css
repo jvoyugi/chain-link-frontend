@@ -4,7 +4,7 @@
     margin: 0;
 }
 .top{
-    background: #F6F8FB;
+    background: grey;
     display: flex;
     flex-direction: row-reverse;
 }
