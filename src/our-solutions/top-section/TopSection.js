@@ -1,24 +1,29 @@
 import React from 'react';
 import "./TopSection.css";
 import product_image from "../productImage.jpg";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const TopSection = ({ props }) => {
     return (
-        <div className="top-section">
-            <div className="left-section">
-                <div className='top-section-header'>
-                    OUR PRODUCTS AND SOLUTIONS
-                </div>
-                <div className='top-section-body'>
-                    The right sales supply chain-link for your business
-                </div>
-            </div>
+        <>
+        <section className="p-1 text-center text-sm-start top-section">
+            <div className="container">
+                <div className="d-sm-flex align-items-center justify-content-between">
+                    <div className="intro-text1 my-5 p-1">
+                        <h1>
+                            OUR  <span className="text-warning">PRODUCTS</span>  AND <span className="text-warning">SOLUTIONS </span>
+                        </h1>
 
-            <div className="right-section">
-                <img src={product_image} width={500} alt="chainLink" />
-            </div>
+                        <div className='lead intro-text1 justify-content-between'>
+                            The right sales supply chain-link for your business
+                        </div>
+                </div>
 
+                    <img src={product_image} className="img-fluid mb-2 d-sm-block rounded custom-image"  alt="chainLink" />
+            </div>
         </div>
+        </section>
+        </>
     )
 };
 export default TopSection;

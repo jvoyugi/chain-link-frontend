@@ -9,35 +9,43 @@ const Data = [
 
   {
     scardimage: benefit1,
-    scardtitle : "Real time money in monitoring",
-    scarddesc: "It is a long established fact that a reader will be distracted by the readable content.",
+    scardtitle : "Monitor money in",
+    scarddesc: "View all profits made from different accounts",
   },
 
   {
     scardimage: benefit2,
-    scardtitle : "Real time money out monitoring",
-    scarddesc: "It is a long established fact that a reader will be distracted by the readable content.",
+    scardtitle : "Monitor money out",
+    scarddesc: "Track all money out and any debts the customer might have",
   },
 
   {
     scardimage: benefit3,
     scardtitle : "Real time dashboard analytics",
-    scarddesc: "It is a long established fact that a reader will be distracted by the readable content.",
+    scarddesc: "Real time dashboards with data of the past one year",
   },
 
   {
     scardimage: benefit4,
-    scardtitle : "Reconciliatory tools",
-    scarddesc: "It is a long established fact that a reader will be distracted by the readable content.",
+    scardtitle : "Reconciliatory tool",
+    scarddesc: "Reconciliation for all your business accounts:reconciliation of all payments\n" +
+        "made to one account",
   },
 
   {
     scardimage: benefit5,
     scardtitle : "Customizable",
-    scarddesc: "It is a long established fact that a reader will be distracted by the readable content.",
+    scarddesc: "We customize the tool to your requirements",
+  },
+
+  {
+    scardimage: benefit1,
+    scardtitle : "Single View ",
+    scarddesc: "View all your businesses  and inventories on one platform",
   },
 
 
 ];
 
 export default Data;
+
