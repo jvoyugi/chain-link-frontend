@@ -23,29 +23,31 @@
 }
 
 .mainContent {
-    margin-top: 30px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .section {
-    width: 50%;
     padding: 20px;
 }
 
 .sectionHeader {
-    width: 537.6px;
-    height: 73.86px;
+    max-width: 537.6px;
+    max-height: 73.86px;
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 22px;
+    font-size: 30px;
+    line-height: 29px;
+    margin-bottom: 10px;
     color: #0F001A;
 }
 
 .sectionBody {
-    width: 613px;
-    height: 159px;
+    max-width: 610px;
+    min-height: 159px;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -56,14 +58,16 @@
 .sectionFooter {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .sectionFooterRow {
-    width: 30%;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
+    margin-left: 0;
+    margin-right: auto;
 }
 
 .icon {
