@@ -6,14 +6,14 @@ import salesimage from "./images/sales.jpeg"
 import inventoryimage from "./images/inventory.jpeg"
 import procureimage from "./images/procure.jpeg"
 import reportsimage from "./images/Reports.jpeg"
-import chartsimage from "./images/charts.jpg"
+import chartsimage from "./images/charts1.jpg"
 
 const Home = () => {
   return (
     <>
     <Nav/>
-    <div class = "container">
-      <div class="row">
+    <div class = "row">
+      <div class="content">
         <div class="col-md-6">
           <div class="card">
             <div class="card-body">
@@ -28,7 +28,7 @@ const Home = () => {
         <div className="col-md-6">
           <div className="card">
           <div class="card-body">
-            <img src={chartsimage} alt="image" className="image" style={{ "height": "140px", "width": "530px" }} />
+            <img src={chartsimage} alt="image" className="image" style={{ "height": "140px", "width": "550px" }} />
           </div>
           </div>
         </div>
@@ -61,7 +61,7 @@ const Home = () => {
           </div>
           <div className="col">
             <div className="card">
-              <img src= {reportsimage} className="card-img-top" alt="image" />
+              <img src= {reportsimage} className="card-img-top" bg-info alt="image" />
               <div className="card-body">
                 <h6 className="card-title">Real-time dashboards</h6>
                 <p className="card-text">View all reports and profits made from different products.</p>
