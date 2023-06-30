@@ -4,7 +4,7 @@ import left_image from '../stock-image-1.jpg';
 export const RightSide = ({ props }) => {
     return (
         <div className={styles.rightSection}>
-            <img src={left_image} width={500} alt="Someone in front of a laptop" />
+            <img src={left_image} width={350} alt="Strong chain" />
         </div>
     )
 }
