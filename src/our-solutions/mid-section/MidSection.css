@@ -45,3 +45,11 @@
     border-radius: 2px;
     margin: auto;
 }
+.BottomSectionRow{
+    background: transparent;
+}
+
+.border-data {
+    border: 1px solid darkgrey;
+    zIndex: 9999,
+}

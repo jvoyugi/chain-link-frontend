@@ -1,10 +1,9 @@
-.body {
+.LandingContainer {
     background-image : linear-gradient(rgb(40, 202, 247),rgb(102, 195, 245));
-
     height:600px;
     padding-left: 1px;
     padding-right: 1px;
-    
+
 }
 
 .button {
@@ -13,17 +12,17 @@
     padding-inline: 5px;
     padding-block-start: 5%;
     font-size: small;
-}            
-.btn btn-success{
+}
+.button button-success{
     height: 5%;
     padding-inline: 5px;
     font-size: small;
 }
-.row {
+.LandingRow {
     padding-top: 0px;
     padding-left: 1px;
     padding-right: 1px;
-    
+
     height: 185px;
 }
 .card-title1 {
@@ -31,7 +30,7 @@
     color: rgb(93, 209, 93);
     text-align: center;
     font-size: 155%;
-      
+
 }
 .card-text1 {
     font-size:medium;
@@ -42,22 +41,22 @@
 }
 .background2 {
     border-image-width: 0px;
-  
+
 }
 
 .products p{
     font-size: 14px;
     background: transparent;
     color: rgb(74, 200, 245);
-    
+
 }
 .card-img-top {
        height: 120px;
-    
+
 }
 
 
 
 
-  
+
   

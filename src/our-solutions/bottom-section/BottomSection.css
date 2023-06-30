@@ -1,3 +1,4 @@
+
 .row-header {
     width: 100%;
     text-align: center;
@@ -16,5 +17,40 @@
     border-radius: 2px;
     margin: auto;
 }
+
+.BottomSectionRow{
+    background: transparent;
+}
+
+.borderBottom {
+    border: 1px solid lawngreen;
+    zIndex: 9999,
+}
+
+.shp {
+    width: 84px;
+    height: 84px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    text-align: center;
+    line-height: 84px;
+    position: absolute;
+    top: -42px;
+    left: 50%;
+    margin-left: -42px;
+    background: limegreen;
+    color: white;
+}
+
+.sec_bg {
+    background: rgba(0,0,5,.4);
+}
+
+.sec_2 {
+
+    background-image: url('../theSolution.jpg');
+    background-size: cover;
+
+}
+
 
 
