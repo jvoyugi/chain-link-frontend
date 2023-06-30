@@ -1,8 +1,10 @@
 .LandingContainer {
-    background-image : linear-gradient(rgb(40, 202, 247),rgb(102, 195, 245));
+    background-image : linear-gradient(rgb(111, 219, 156),rgb(110, 199, 117));
     height:600px;
-    padding-left: 1px;
-    padding-right: 1px;
+    width: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-size: cover;
 
 }
 
@@ -19,11 +21,12 @@
     font-size: small;
 }
 .LandingRow {
-    padding-top: 0px;
-    padding-left: 1px;
-    padding-right: 1px;
+    padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: transparent;
 
-    height: 185px;
+    height: 200px;
 }
 .card-title1 {
     font-style: oblique;
@@ -48,11 +51,21 @@
     font-size: 14px;
     background: transparent;
     color: rgb(74, 200, 245);
+    
 
 }
 .card-img-top {
        height: 120px;
 
+}
+.item {
+    text-Align:center;
+    font-size: 30px;
+    color: black;
+
+}
+.card {
+    background-color: transparent;
 }
 
 

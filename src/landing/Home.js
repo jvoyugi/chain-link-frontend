@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "../common/Nav";
+import Footer from "../common/Footer";
 import "bootstrap/dist/css/bootstrap.css"
 import './home.css';
 import salesimage from "./images/sales.jpeg"
@@ -8,11 +9,12 @@ import procureimage from "./images/procure.jpeg"
 import reportsimage from "./images/Reports.jpeg"
 import chartsimage from "./images/charts1.jpg"
 
+
 const Home = () => {
   return (
     <>
     <Nav/>
-    <div class = "LandingContainer container">
+    <div class = "LandingContainer container">   
       <div class="LandingRow row">
         <div class="col-md-6">
           <div class="card">
@@ -28,17 +30,21 @@ const Home = () => {
         <div className="col-md-6">
           <div className="card">
           <div class="card-body">
-            <img src={chartsimage} alt="image" className="image" style={{ "height": "140px", "width": "550px" }} />
+            <img src={chartsimage} alt="image" className="image" style={{ "height": "170px", "width": "520px" }} />
           </div>
           </div>
         </div>
-      </div>
+          
+      <div class="item">
 
-          <p style={{ textAlign:"center" }}>Our Products Offering.</p>
-
+      <p style={{ textAlign:"center" }}>Our Products Offering</p>
+        </div>
+    
+          
     <div class="products">
+    
         <div className="LandingRow row row-cols-1 row-cols-md-4 g-1">
-          <div className="col">
+          <div className="col"  >
             <div className="card">
               <img src= {procureimage} className="card-img-top" alt="image" />
               <div className="card-body">
@@ -77,11 +83,14 @@ const Home = () => {
                 <p className="card-text">Real time stock management and stock value reports.</p>
                 <a href="#" className="button" class3="button button-success btn btn-success">Learn More..</a>
               </div>
+             
             </div>
           </div>
         </div>
       </div>
     </div>
+    </div>
+    <Footer/>
     </>
   )
 }
