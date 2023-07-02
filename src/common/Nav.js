@@ -15,13 +15,10 @@ const HamburgerNavBar = ({ navLinkItem }) => {
     return (
         <>
             <div className={styles.hamBurgerIcon}>
-                <FontAwesomeIcon icon={faBars} size="2xl" onClick={toggleVisibility} style={{ cursor: "pointer" }} />
+                <FontAwesomeIcon icon={hamburgerMenuVisibility ? faXmark : faBars} size="2xl" onClick={toggleVisibility} style={{ cursor: "pointer" }} />
             </div>
             {hamburgerMenuVisibility &&
                 <div className={styles.hamburgerMenu}>
-                    <div className={styles.hamburgerMenuClose}>
-                        <FontAwesomeIcon icon={faXmark} onClick={toggleVisibility} size="xl" style={{ cursor: "pointer" }} />
-                    </div>
                     <div className={styles.hamburgerNavLinks}>
                         <Link to="/" className={styles.hamburgerNavLinkItem} style={{ color: navLinkItem === "home" ? activeColor : inactiveColor }}>Home</Link>
                         <br />
