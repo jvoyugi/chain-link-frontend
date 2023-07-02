@@ -3,6 +3,7 @@ import Home from './landing/Home';
 import AboutUs from "./about-us/AboutUs";
 import Solutions from "./our-solutions/solutions";
 import Contact from "./contact-us/ContactUs";
+import Login from "./login/Login";
 import React from "react";
 import { Routes, BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -15,7 +16,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
     </>
