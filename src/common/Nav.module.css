@@ -71,10 +71,10 @@
 }
 .hamburgerMenu {
   position: fixed;
-  top: 60px;
+  top: 50px;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 65%;
   background-color: #2cb34a;
   z-index: 2;
   cursor: pointer;
