@@ -2,6 +2,7 @@ import React from "react";
 import logo from './image.svg';
 import styles from './Footer.module.css';
 import headerStyles from "./Nav.module.css"
+
 const Footer = () => {
     return (<>
         <div className={styles.footer}>
@@ -123,6 +124,5 @@ const Footer = () => {
             </div>
         </div>
     </>)
-}
-
+};
 export default Footer;

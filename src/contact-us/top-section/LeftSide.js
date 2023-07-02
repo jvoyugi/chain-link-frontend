@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./TopSection.module.css";
+
 export const LeftSide = () => {
     return (
         <div className={styles.leftSection}>

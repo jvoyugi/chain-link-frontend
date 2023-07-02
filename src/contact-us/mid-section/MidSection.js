@@ -3,7 +3,6 @@ import styles from "./MidSection.module.css";
 import { LeftSide } from './LeftSide';
 import { RightSide } from './RightSide';
 
-
 const MidSection = () => {
     return (
         <div className={styles.contactPage}>

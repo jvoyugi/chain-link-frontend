@@ -24,7 +24,7 @@ export const LeftSide = () => {
                     <br />
                     N<sup>th</sup> floor, <br />
                     Times Tower,<br />
-                    Haile Selasie Ave., <br />
+                    Haile Selassie Ave., <br />
                     Nairobi,Kenya
                 </div>
                 <div className={styles.sectionFooterRow}>
