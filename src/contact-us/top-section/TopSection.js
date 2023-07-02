@@ -7,8 +7,8 @@ import { RightSide } from './RightSide';
 const TopSection = () => {
     return (
         <div className={styles.topSection}>
-                <LeftSide />
-                <RightSide />
+            <LeftSide />
+            <RightSide />
         </div>
     )
 };

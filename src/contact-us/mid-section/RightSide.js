@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./MidSection.module.css";
-export const RightSide = ({ props }) => {
+export const RightSide = () => {
     return (
         <div className={styles.section}>
             <div className={styles.formMessage}>

@@ -1,117 +1,116 @@
 .topSection {
-    background: #F6F8FB;
-    position: relative;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  background: #f6f8fb;
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-
 .leftSection {
-    padding: 10px;
-    margin: auto;
-    word-wrap: break-word;
-    text-align: center;
+  padding: 10px;
+  margin: auto;
+  word-wrap: break-word;
+  text-align: center;
 }
 
 .rightSection {
-    margin: auto;
+  margin: auto;
 }
 
 .topSectionHeader {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 50px;
-    font-family: 'DM Sans', sans-serif;
-    color: #2CB34A;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 50px;
+  font-family: "DM Sans", sans-serif;
+  color: #2cb34a;
 }
 
 .topSectionBody {
-    font-style: normal;
-    font-family: 'DM Sans', sans-serif;
-    opacity: 0.6;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 40px;
-    color: #2CB34A;
+  font-style: normal;
+  font-family: "DM Sans", sans-serif;
+  opacity: 0.6;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  color: #2cb34a;
 }
 
 .sectionFooter {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .sectionFooterRow {
-    width: 30%;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+  width: 30%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .icon {
-    color: #2CB34A;
-    text-align: center;
+  color: #2cb34a;
+  text-align: center;
 }
 
 .iconLarge {
-    color: #2CB34A;
-    text-align: center;
-    size: large;
+  color: #2cb34a;
+  text-align: center;
+  size: large;
 }
 
 .sectionFooterIcons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .footerIcon {
-    margin: 20px;
+  margin: 20px;
 }
 
 .formMessage {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 27px;
-    color: #0F001A;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  color: #0f001a;
 }
 
 .emailSubscriberInput {
-    margin: 10px;
-    padding: 10px;
-    width: 200px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
-    border: none;
-    height: 30px;
-    background: #9A5757;
-    border-radius: 5px;
-    color: #FFFFFF;
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  border: none;
+  height: 30px;
+  background: #9a5757;
+  border-radius: 5px;
+  color: #ffffff;
 }
 
 .topSectionForm {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .subscribeButton {
-    width: 160px;
-    margin: 10px;
-    padding: 14px;
-    font-family: 'Futura PT', sans-serif;
-    font-size: 16px;
-    color: #2CB34A;
-    background: #FFFFFF;
-    font-weight: 500;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  width: 160px;
+  margin: 10px;
+  padding: 14px;
+  font-family: "Futura PT", sans-serif;
+  font-size: 16px;
+  color: #2cb34a;
+  background: #ffffff;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

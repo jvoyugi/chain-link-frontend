@@ -1,122 +1,122 @@
 .contactPage {
-    background: #FFFFFF;
-    padding: 10px;
+  background: #ffffff;
+  padding: 10px;
 }
 
 .pageHeader {
-    width: 100%;
-    text-align: center;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
-    letter-spacing: 0.01em;
-    color: #2CB34A;
+  width: 100%;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.01em;
+  color: #2cb34a;
 }
 
 .underline {
-    width: 323.37px;
-    height: 3.36px;
-    background: #2CB34A;
-    border-radius: 2px;
-    margin: auto;
+  width: 323.37px;
+  height: 3.36px;
+  background: #2cb34a;
+  border-radius: 2px;
+  margin: auto;
 }
 
 .mainContent {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .section {
-    padding: 20px;
+  padding: 20px;
 }
 
 .sectionHeader {
-    max-width: 537.6px;
-    max-height: 73.86px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 29px;
-    margin-bottom: 10px;
-    color: #0F001A;
+  max-width: 537.6px;
+  max-height: 73.86px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 29px;
+  margin-bottom: 10px;
+  color: #0f001a;
 }
 
 .sectionBody {
-    max-width: 610px;
-    min-height: 159px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 40px;
-    color: #0F001A;
+  max-width: 610px;
+  min-height: 159px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  color: #0f001a;
 }
 
 .sectionFooter {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .sectionFooterRow {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    margin-left: 0;
-    margin-right: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .icon {
-    color: #2CB34A;
-    text-align: center;
+  color: #2cb34a;
+  text-align: center;
 }
 
 .iconLarge {
-    color: #2CB34A;
-    text-align: center;
-    size: large;
+  color: #2cb34a;
+  text-align: center;
+  size: large;
 }
 
 .sectionFooterIcons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .footerIcon {
-    margin: 20px;
+  margin: 20px;
 }
 
 .formMessage {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 27px;
-    color: #0F001A;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  color: #0f001a;
 }
 
 .formInput {
-    width: 90%;
-    margin: 10px;
-    padding: 10px;
-    font-family: 'Futura PT', sans-serif;
-    font-size: 16px;
+  width: 90%;
+  margin: 10px;
+  padding: 10px;
+  font-family: "Futura PT", sans-serif;
+  font-size: 16px;
 }
 
 .submitButton {
-    background: #2CB34A;
-    width: 93%;
-    margin: 10px;
-    padding: 10px;
-    font-family: 'Futura PT', sans-serif;
-    font-size: 16px;
-    color: #FFFFFF;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
+  background: #2cb34a;
+  width: 93%;
+  margin: 10px;
+  padding: 10px;
+  font-family: "Futura PT", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
 }

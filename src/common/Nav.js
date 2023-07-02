@@ -77,5 +77,4 @@ const Nav = ({ navLinkItem }) => {
         </div>
     )
 }
-
 export default Nav;
