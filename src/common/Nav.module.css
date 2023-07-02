@@ -74,7 +74,7 @@
   top: 50px;
   left: 0;
   right: 0;
-  bottom: 65%;
+  bottom: 100%;
   background-color: #2cb34a;
   z-index: 2;
   cursor: pointer;
@@ -83,6 +83,7 @@
 .hamburgerNavLinks {
   display: flex;
   flex-direction: column;
+  background-color: #2cb34a;
 }
 
 .hamburgerNavLinkItem {
