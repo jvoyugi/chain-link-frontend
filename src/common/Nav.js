@@ -45,7 +45,7 @@ const NavBar = ({ navLinkItem }) => {
                 <Link to="/contact" className={styles.navLinkItem} style={{ color: navLinkItem === "contact" ? "#2CB34A" : "#02073E" }}>Contact us</Link>
             </div>
             <div className={styles.navbarLoginLink}>
-                <button type="button" className={styles.navbarLoginButton}>Login</button>
+                <Link to="/login" className={styles.navbarLoginButton}>Login</Link>
             </div>
         </>
     )
