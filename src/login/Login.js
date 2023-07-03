@@ -22,7 +22,7 @@ const Login = () => {
 
   return (
     <>
-      <Nav />
+      <Nav navLinkItem="login" />
       <div className={styles.loginScreen}>
         <div className={styles.loginScreenHeader}>
           Sign in to your account
@@ -33,14 +33,15 @@ const Login = () => {
               <input className={styles.formInput} onChange={handleEmailChange} type="text" name="email" id="email" placeholder="Email" required />
             </div>
             <div className={styles.formField}>
+              <span className={styles.forgotPassword}>Forgot password?</span>
               <input className={styles.formInput} onChange={handlePasswordChange} type="password" name="password" id="password" placeholder="Password" required />
             </div>
             <div className={styles.loginButton}>
               <button className={styles.submitButton} onClick={handleSubmit} type="submit">Login</button>
             </div>
           </form>
-          <div className={styles.noAccount}>
-            <Link to="/sign-up">Click here to register a new account</Link>
+          <div>
+            <Link to="/sign-up" className={styles.noAccount}>Register a new account</Link>
           </div>
         </div>
       </div>

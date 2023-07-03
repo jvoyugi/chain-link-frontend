@@ -33,13 +33,13 @@ const Register = () => {
 
   return (
     <>
-      <Nav />
-      <div className={styles.loginScreen}>
-        <div className={styles.loginScreenHeader}>
+      <Nav navLinkItem="register"/>
+      <div className={styles.registerScreen}>
+        <div className={styles.registerScreenHeader}>
           Create your account
         </div>
         <div className={styles.form}>
-          <form className={styles.loginForm}>
+          <form className={styles.registerForm}>
             <div className={styles.formField}>
               <input className={styles.formInput} onChange={handleFullNameChange} type="text" name="fullName" id="fullName" placeholder="Full Name" required />
             </div>
@@ -55,12 +55,12 @@ const Register = () => {
             <div className={styles.formField}>
               <input className={styles.formInput} onChange={handlePasswordConfirmationChange} type="password" name="password" id="password" placeholder="Password Confirmation" required />
             </div>
-            <div className={styles.loginButton}>
+            <div className={styles.registerButton}>
               <button className={styles.submitButton} onClick={handleSubmit} type="submit">Sign Up</button>
             </div>
           </form>
-          <div className={styles.noAccount}>
-            <Link to="/login">Click here to sign in</Link>
+          <div>
+            <Link to="/login" className={styles.noAccount}>Click here to sign in</Link>
           </div>
         </div>
       </div>
