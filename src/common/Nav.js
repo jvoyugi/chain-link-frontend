@@ -29,6 +29,8 @@ const HamburgerNavBar = ({ navLinkItem }) => {
                         <Link to="/contact" className={styles.hamburgerNavLinkItem} style={{ color: navLinkItem === "contact" ? activeColor : inactiveColor }}>Contact us</Link>
                         <br />
                         <Link to="/login" className={styles.hamburgerNavLinkItem} style={{ color: navLinkItem === "login" ? activeColor : inactiveColor }}>Login</Link>
+                        <br/>
+                        <Link to="/sign-up" className={styles.hamburgerNavLinkItem} style={{ color: navLinkItem === "register" ? activeColor : inactiveColor }}>Register</Link>
                     </div>
                 </div>}
         </>
@@ -46,6 +48,7 @@ const NavBar = ({ navLinkItem }) => {
             </div>
             <div className={styles.navbarLoginLink}>
                 <Link to="/login" className={styles.navbarLoginButton}>Login</Link>
+                <Link to="/sign-up" className={styles.navbarLoginButton}>Register</Link>
             </div>
         </>
     )
