@@ -1,0 +1,71 @@
+import React, { useState } from 'react';
+
+import Nav from '../common/Nav';
+import styles from "./Register.module.css";
+import { Link } from 'react-router-dom';
+
+const Register = () => {
+
+  let [email, setEmail] = useState("");
+  let [password, setPassword] = useState("");
+  let [passwordConfirmation, setPasswordConfirmation] = useState();
+  let [phoneNumber, setPhoneNumber] = useState("");
+  let [fullName, setFullName] = useState("");
+
+  const handleEmailChange = e => setEmail(e.target.value);
+  const handlePasswordChange = e => setPassword(e.target.value);
+  const handlePasswordConfirmationChange = e => setPasswordConfirmation(e.target.value);
+  const handlePhoneNumberChange = e => setPhoneNumber(e.target.value);
+  const handleFullNameChange = e => setFullName(e.target.value);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (password === passwordConfirmation) {
+      let payload = {
+        email: email,
+        password: password,
+        phoneNumber: phoneNumber,
+        fullName: fullName
+      }
+      console.log(payload);
+    }
+  }
+
+  return (
+    <>
+      <Nav />
+      <div className={styles.loginScreen}>
+        <div className={styles.loginScreenHeader}>
+          Create your account
+        </div>
+        <div className={styles.form}>
+          <form className={styles.loginForm}>
+            <div className={styles.formField}>
+              <input className={styles.formInput} onChange={handleFullNameChange} type="text" name="fullName" id="fullName" placeholder="Full Name" required />
+            </div>
+            <div className={styles.formField}>
+              <input className={styles.formInput} onChange={handlePhoneNumberChange} type="text" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" required />
+            </div>
+            <div className={styles.formField}>
+              <input className={styles.formInput} onChange={handleEmailChange} type="text" name="email" id="email" placeholder="Email" required />
+            </div>
+            <div className={styles.formField}>
+              <input className={styles.formInput} onChange={handlePasswordChange} type="password" name="password" id="password" placeholder="Password" required />
+            </div>
+            <div className={styles.formField}>
+              <input className={styles.formInput} onChange={handlePasswordConfirmationChange} type="password" name="password" id="password" placeholder="Password Confirmation" required />
+            </div>
+            <div className={styles.loginButton}>
+              <button className={styles.submitButton} onClick={handleSubmit} type="submit">Sign Up</button>
+            </div>
+          </form>
+          <div className={styles.noAccount}>
+            <Link to="/login">Click here to sign in</Link>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+};
+
+export default Register;
