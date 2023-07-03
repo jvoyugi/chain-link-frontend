@@ -1,4 +1,4 @@
-.loginScreen {
+.registerScreen {
   border-radius: 10px;
   background: #ffffff;
   display: flex;
@@ -8,7 +8,7 @@
   align-items: center;
   margin: 20px;
 }
-.loginScreenHeader {
+.registerScreenHeader {
   text-align: center;
   width: 100%;
   font-size: 24px;
@@ -43,7 +43,7 @@
   margin-top: 20px;
   font-size: 20px;
 }
-.loginButton {
+.registerButton {
   margin-top: 20px;
   width: 100%;
 }
@@ -60,4 +60,8 @@
 }
 
 .noAccount {
+  text-decoration: none;
+  font-weight: 500;
+  color: #02073e;
+  opacity: 0.7;
 }
