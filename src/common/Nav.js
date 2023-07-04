@@ -73,7 +73,7 @@ const Nav = ({ navLinkItem }) => {
                 <img src={logo} alt="Logo" className={styles.logo} />
                 ChainLink
             </div>
-            {windowSize > 800 ? <NavBar navLinkItem={navLinkItem} /> : <HamburgerNavBar navLinkItem={navLinkItem} />}
+            {windowSize > 950 ? <NavBar navLinkItem={navLinkItem} /> : <HamburgerNavBar navLinkItem={navLinkItem} />}
         </div>
     )
 }
