@@ -18,22 +18,30 @@ const Register = () => {
   const handlePhoneNumberChange = e => setPhoneNumber(e.target.value);
   const handleFullNameChange = e => setFullName(e.target.value);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
     if (password === passwordConfirmation) {
-      let payload = {
+      let payload = JSON.stringify({
         email: email,
         password: password,
         phoneNumber: phoneNumber,
         fullName: fullName
-      }
-      console.log(payload);
+      });
+      await fetch(`${process.env.REACT_APP_API_URL}/api/users`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: payload
+        })
+        .then(resp => console.log(resp.json()));
     }
   }
 
   return (
     <>
-      <Nav navLinkItem="register"/>
+      <Nav navLinkItem="register" />
       <div className={styles.registerScreen}>
         <div className={styles.registerScreenHeader}>
           Create your account
@@ -44,7 +52,7 @@ const Register = () => {
               <input className={styles.formInput} onChange={handleFullNameChange} type="text" name="fullName" id="fullName" placeholder="Full Name" required />
             </div>
             <div className={styles.formField}>
-              <input className={styles.formInput} onChange={handlePhoneNumberChange} type="text" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" required />
+              <input className={styles.formInput} onChange={handlePhoneNumberChange} type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" required />
             </div>
             <div className={styles.formField}>
               <input className={styles.formInput} onChange={handleEmailChange} type="text" name="email" id="email" placeholder="Email" required />

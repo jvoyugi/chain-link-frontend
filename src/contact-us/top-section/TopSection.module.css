@@ -87,8 +87,8 @@
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   border: none;
-  height: 30px;
   background: #9a5757;
+  opacity: 0.7;
   border-radius: 5px;
   color: #ffffff;
 }
@@ -104,7 +104,7 @@
 .subscribeButton {
   width: 160px;
   margin: 10px;
-  padding: 14px;
+  padding: 10px;
   font-family: "Futura PT", sans-serif;
   font-size: 16px;
   color: #2cb34a;
