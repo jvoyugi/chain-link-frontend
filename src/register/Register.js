@@ -30,6 +30,7 @@ const Register = () => {
       await fetch(`${process.env.REACT_APP_API_URL}/api/users`,
         {
           method: "POST",
+          mode: "cors",
           headers: {
             "Content-Type": "application/json",
           },
