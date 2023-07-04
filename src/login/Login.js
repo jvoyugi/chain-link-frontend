@@ -11,13 +11,21 @@ const Login = () => {
   const handleEmailChange = e => setEmail(e.target.value);
   const handlePasswordChange = e => setPassword(e.target.value);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
-    let payload = {
+    let payload = JSON.stringify({
       email: email,
       password: password
-    }
-    console.log(payload);
+    });
+    await fetch(`${process.env.REACT_APP_API_URL}/api/auth/login`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: payload
+      })
+      .then(resp => console.log(resp.json()));
   }
 
   return (
