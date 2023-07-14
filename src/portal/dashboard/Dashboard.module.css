@@ -1,0 +1,23 @@
+.registerScreen {
+  border-radius: 10px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.dashboardTitle{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 40px;
+  color: darkgreen;
+  padding-top: 5px;
+  margin: 7px;
+}
+.dashboardChartWrapper {
+  max-width: 610px;
+  /*height: 200px; !* Adjust the height as needed *!*/
+}
