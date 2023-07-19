@@ -423,7 +423,7 @@
 }
 .cancelButton{
     margin:auto;
-    width: 50%;
+    width: 60%;
     background: #2cb34a;
     border:none;
     padding: 10px;
@@ -434,7 +434,7 @@
 }
 .deleteButton{
     margin:auto;
-    width: 50%;
+    width: 60%;
     background: red;
     border:none;
     padding: 10px;
