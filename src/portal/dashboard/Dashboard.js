@@ -18,9 +18,9 @@ const DashBoard = () => {
             <div className={styles.dashboardApp} >
 
                 {/*//top section*/}
-                <div className="container mx-auto py-5  ">
-                    <div className=" row justify-content-right pt-5">
-                        <div className="text-right text-success font-weight-bold" className={styles.dashboardTitle}>
+                <div className="container mx-auto py-5 ">
+                    <div className=" row pt-5 align-items-center justify-content-evenly">
+                        <div className="col-md-4 col-lg-3 font-weight-bold" className={styles.dashboardTitle}>
                             Dashboard
                         </div>
                     </div>
