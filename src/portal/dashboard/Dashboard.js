@@ -7,6 +7,8 @@ import DonutChart from "./component/DonutChart";
 import LineChart from "./component/LineChart";
 import BarChart from "./component/BarChart";
 import TableCard from "./component/TableCard";
+import Nav from "../../common/Nav";
+import SideBar from "../sideBar/SideBar";
 ChartJs.register(
     ArcElement, Tooltip, Legend
 );
@@ -15,7 +17,10 @@ const DashBoard = () => {
 
     return (
         <>
+            <div>
+                <SideBar navLinkItem="dashboard"/>
             <div className={styles.dashboardApp} >
+
 
                 {/*//top section*/}
                 <div className="container mx-auto py-5 ">
@@ -57,13 +62,13 @@ const DashBoard = () => {
 
                 {/*mid section*/}
                 <div className="row d-sm-flex align-items-center justify-content-center m-5 p-3">
-                    <div className="col-md-7 card " className={styles.dashboardChartWrapper}>
+                    <div className="col-md-4card " className={styles.dashboardChartWrapper}>
                             <h2 className="card-title">General Trends Over Time</h2>
                             <div className="card-content">
                                 <LineChart/>
                             </div>
                     </div>
-                    <div  className="col-md-7 card" className={styles.dashboardChartWrapper} >
+                    <div  className="col-md-4 card" className={styles.dashboardChartWrapper} >
                         <h2 className="card-title">Comparison per business Entity</h2>
                         <div className="card-content">
                             <BarChart/>
@@ -96,6 +101,7 @@ const DashBoard = () => {
                 <div>
 
                 </div>
+            </div>
             </div>
         </>
     )

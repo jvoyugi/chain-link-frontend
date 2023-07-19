@@ -19,5 +19,9 @@
 }
 .dashboardChartWrapper {
   max-width: 610px;
-  /*height: 200px; !* Adjust the height as needed *!*/
+}
+.dashboardApp{
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
 }
