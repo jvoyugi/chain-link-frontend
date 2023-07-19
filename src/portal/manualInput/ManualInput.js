@@ -9,8 +9,6 @@ import DeletePopUp from "./components/DeletePopUp";
 
 const ManualInput = () => {
     const[buttonPopUp, setButtonPopUp]= useState(false);
-    const[editPopUp, setEditPopUp]= useState(false);
-    const[deletePopUp, setDeletePopUp]= useState(false);
     return (
         <>
 

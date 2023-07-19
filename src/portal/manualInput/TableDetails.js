@@ -1,16 +1,14 @@
 import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from "./TableDetails.module.css";
-import Action from "./components/Action";
 import DeletePopUp from "./components/DeletePopUp";
 import EditPopUp from "./components/EditPopUp";
 import PopUp from "./components/PopUp";
+import {BsFillPencilFill, BsFillTrashFill} from "react-icons/bs";
 
 const TableDetails = () => {
 
 
-    const[editPopUp, setEditPopUp]= useState(false);
-    const[deletePopUp, setDeletePopUp]= useState(false);
 
     const data = [
         { id: 1, column1: '1', column2: 'Mpesa', column3: 'Ksh 300,000', column4: 'Money 0ut' },
@@ -26,6 +24,9 @@ const TableDetails = () => {
         { id: 11, column1: '11', column2: 'Warehouse', column3: 'Ksh 345,000', column4: 'Money In' },
         { id: 12, column1: '12', column2: 'Supermarket', column3: 'Ksh 45,670', column4: 'Money In' },
     ];
+
+    const[editPopUp, setEditPopUp]= useState(false);
+    const[deletePopUp, setDeletePopUp]= useState(false);
 
     return (
         <div className="row">
@@ -47,7 +48,12 @@ const TableDetails = () => {
                                 <td>{item.column2}</td>
                                 <td>{item.column3}</td>
                                 <td>{item.column4}</td>
-                                <td className={styles.tableActions} ><Action/></td>
+                                <td className={styles.tableActions} >
+                                    <span className="flex justify-content-around">
+                                    <BsFillTrashFill color="red" className="m-2" onClick={()=>setEditPopUp(true)} />
+                                    <BsFillPencilFill color="green" className="m-2" onClick={()=>setDeletePopUp(true)}/>
+                                     </span>
+                                </td>
                             </tr>
                         ))}
                         </tbody>
