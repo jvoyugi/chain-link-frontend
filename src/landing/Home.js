@@ -14,8 +14,8 @@ const Home = () => {
   return (
     <>
     <Nav/>
-    <div class = "LandingContainer container">   
-      <div class="LandingRow row">
+    <div class = "LandingContainer container">
+      <div class="row LandingRow ">
         <div class="col-md-6">
           <div class="card">
             <div class="card-body">

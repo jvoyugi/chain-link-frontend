@@ -9,13 +9,17 @@
     flex-direction: row-reverse;
 }
 .custom-image{
-    width: 410px;
-    height: 410px;
+    width: 300px;
+    height: 300px;
     padding: 5px;
     margin-left: 50px;
 }
 .intro-text{
     justify-content: center;
+    color: #2cb34a;
+}
+.solutions_text{
+    color: #2cb34a;
 }
 
 

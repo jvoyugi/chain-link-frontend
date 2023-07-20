@@ -11,9 +11,7 @@ const TableCard = () => {
     ];
 
     return (
-        <div className="card">
-            <div className="card-header">Recent Transactions</div>
-            <div className="card-body">
+        <div className="row">
                 <div className="table-responsive">
                     <table className="table table-bordered">
                         <thead>
@@ -36,7 +34,6 @@ const TableCard = () => {
                         </tbody>
                     </table>
                 </div>
-            </div>
         </div>
     );
 };
