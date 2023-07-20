@@ -4,9 +4,7 @@ import TableDetails from "./TableDetails";
 import InputPopUp from "./components/InputPopUp";
 import PopUp  from "./components/PopUp";
 import styles from "./ManualInput.module.css";
-import EditPopUp from "./components/EditPopUp";
-import DeletePopUp from "./components/DeletePopUp";
-import SideBar from "../sideBar/SideBar";
+import SideBar from "../../common/sideBar/SideBar"
 
 const ManualInput = () => {
     const[buttonPopUp, setButtonPopUp]= useState(false);
@@ -15,6 +13,11 @@ const ManualInput = () => {
             <div>
                 <SideBar navLinkItem="inputs"/>
             <div  className={styles.content}   >
+                <div className=" row pt-5 align-items-center justify-content-evenly">
+                    <div className="col-md-4 col-lg-3 font-weight-bold" className={styles.manualTitle}>
+                        Manual Input
+                    </div>
+                </div>
                 <div className="row align-items-center justify-content-end " className={styles.popUp} >
                     <button className="col-md-9" className={styles.manualButton} onClick={()=>setButtonPopUp(true)} > Input transactions manually</button>
                     <PopUp trigger={buttonPopUp}  setTrigger ={setButtonPopUp} >

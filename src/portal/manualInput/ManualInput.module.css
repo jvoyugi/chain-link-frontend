@@ -34,9 +34,25 @@
   z-index: 0;
 
 }
+
+.manualTitle{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 40px;
+  color: #2cb34a;
+  padding-top: 5px;
+  margin: 7px;
+}
 .content{
   margin-left: 200px;
   padding: 1px 16px;
   height: 1000px;
 }
-
+@media screen and (max-width: 700px) {
+  .content{
+    margin-left: 0;
+    padding: 1px 1px;
+    height: 1000px;
+  }
+}

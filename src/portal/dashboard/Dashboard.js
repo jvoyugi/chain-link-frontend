@@ -7,8 +7,7 @@ import DonutChart from "./component/DonutChart";
 import LineChart from "./component/LineChart";
 import BarChart from "./component/BarChart";
 import TableCard from "./component/TableCard";
-import Nav from "../../common/Nav";
-import SideBar from "../sideBar/SideBar";
+import SideBar from "../../common/sideBar/SideBar"
 ChartJs.register(
     ArcElement, Tooltip, Legend
 );
