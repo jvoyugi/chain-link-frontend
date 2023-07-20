@@ -1,0 +1,67 @@
+
+.loginScreenHeader {
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    padding: auto;
+    color: #02073e;
+}
+
+.form {
+    min-width: 30%;
+    max-width: 90%;
+}
+
+@media only screen and (max-width: 800px) {
+    .form {
+        min-width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .form {
+        min-width: 90%;
+    }
+}
+
+.formInput {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #2cb34a;
+    width: 100%;
+    font-size: 20px;
+}
+.loginButton{
+    margin-top: 20px;
+    width: 100%;
+}
+.submitButton{
+    margin:auto;
+    width: 100%;
+    background: #2cb34a;
+    border:none;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #ffffff;
+    border-radius: 100px;
+}
+
+.noAccount {
+    text-decoration: none;
+    font-weight: 500;
+    color: #02073e;
+    opacity: 0.7;
+}
+.field{
+    text-decoration: none;
+    font-weight: 500;
+    color: #02073e;
+    opacity: 0.7;
+    float: left;
+}
+.formField{
+    margin-top: 20px;
+}
