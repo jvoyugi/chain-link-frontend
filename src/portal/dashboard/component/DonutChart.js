@@ -8,8 +8,8 @@ const DonutChart = (chartData) => {
         datasets: [{
             label: 'Poll',
             data: [3, 6,15],
-            backgroundColor: ['black', 'red','green'],
-            borderColor: ['black', 'red','green'],
+            backgroundColor: ['black', 'red','#2cb34a'],
+            borderColor: ['black', 'red','#2cb34a'],
         }]
     }
 

@@ -26,6 +26,10 @@ const LineChart = () => {
         }]
     }
 
+    const chartStyle = {
+        width: '100%', // Set the width to 100% of the container
+    };
+
     const Options = {
         plugins:{
             legend:false
@@ -51,7 +55,7 @@ const LineChart = () => {
     return (
         <>
             <div >
-                <Line data={data} options={Options} />
+                <Line data={data} options={Options} style={chartStyle}/>
             </div>
 
         </>

@@ -22,9 +22,10 @@ const DashBoard = () => {
 
 
                 {/*//top section*/}
-                <div className="container mx-auto py-5 ">
-                    <div className=" row pt-5 align-items-center justify-content-evenly">
-                        <div className="col-md-4 col-lg-3 font-weight-bold" className={styles.dashboardTitle}>
+                <div className="container mb-5">
+                    <div  className=" row pt-3 align-items-center d-flex justify-content-end">
+
+                        <div className="col-md-4 col-lg-3 font-weight-bold flex-item" className={styles.dashboardTitle}>
                             Dashboard
                         </div>
                     </div>
@@ -32,11 +33,12 @@ const DashBoard = () => {
 
                         <div className="col-md-4 col-lg-3 text-center card m-1">
                             <div className="box_border position-relative rounded pt-2 pb-2 ">
-                                <BsFillArrowUpCircleFill size="4em" color="green" />
+                                <BsFillArrowUpCircleFill size="4em" color="#2cb34a" />
                                 <p>Total Sales</p>
                                 <p className="text-muted text-left text-xl-center text-lg-center"> KSH 5000000</p>
                             </div>
                         </div>
+
                         <div className="col-md-4 col-lg-3 text-center card m-1">
                             <div className="box_border position-relative rounded pt-2 pb-2 ">
                                 <BsFillArrowDownCircleFill size="4em" color="orange" />
@@ -60,35 +62,40 @@ const DashBoard = () => {
                 </div>
 
                 {/*mid section*/}
-                <div className="row d-sm-flex align-items-center justify-content-center m-5 p-3">
-                    <div className="col-md-4card " className={styles.dashboardChartWrapper}>
+                <div className="container">
+                <div className="row  align-items-stretch justify-content-center m-2 p-2 flex-md-row flex-column">
+                    <div className="col card m-2 flex-item" >
                             <h2 className="card-title">General Trends Over Time</h2>
-                            <div className="card-content">
-                                <LineChart/>
+                            <div className="card-content" className={styles.dashBoardCardContent}>
+                                <LineChart />
                             </div>
                     </div>
-                    <div  className="col-md-4 card" className={styles.dashboardChartWrapper} >
+                    <div  className="col card m-2 flex-item" >
                         <h2 className="card-title">Comparison per business Entity</h2>
-                        <div className="card-content">
+                        <div className="card-content"  className={styles.dashBoardCardContent}>
                             <BarChart/>
                         </div>
 
                     </div>
                 </div>
+                </div>
+
                 {/*Bottom  section*/}
-                <div className="row d-sm-flex align-items-center justify-content-center m-5 p-3">
-                    <div className="col-md-6 card">
+
+                <div className="container">
+                <div className="row d-sm-flex align-items-stretch justify-content-between m-2 p-2 flex-md-row flex-column">
+                    <div className="col card m-2" >
 
                         <h2 className="card-title">Recent Transactions per Business</h2>
-                        <div className="card-content">
+                        <div className="card-content"  className={styles.dashBoardCardContent}>
                             <TableCard />
                         </div>
 
 
                     </div>
-                    <div className="col-md-6 card">
-                        <h2 className="card-title">Comparisons</h2>
-                        <div className="card-content">
+                    <div className="col card m-2">
+                        <h2 className="card-title">Overall Comparison</h2>
+                        <div className="card-content"  className={styles.dashBoardCardContent}>
                             <DonutChart />
                         </div>
 
@@ -96,9 +103,10 @@ const DashBoard = () => {
 
                 </div>
 
-
                 <div>
 
+
+                </div>
                 </div>
             </div>
             </div>

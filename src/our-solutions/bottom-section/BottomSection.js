@@ -18,7 +18,7 @@ const BottomSection = ({ props }) => {
                             <div className='underline'></div>
                         </div>
                     </div>
-                    <div className="row gy-5 d-flex align-items-center justify-content-evenly mt-0 BottomSectionRow">
+                    <div className="row gy-5 d-flex align-items-stretch justify-content-evenly mt-0 BottomSectionRow">
                         <div className="col-md-4 col-lg-3 text-center">
                             <div className="box_border position-relative rounded pt-5 pb-3 px-3 borderBottom shadow">
                                 <div className="shp"></div>

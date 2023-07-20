@@ -23,8 +23,8 @@ const BarChart = () => {
         datasets: [{
             label: 'MoneyIn',
             data: [3, 6,4,5,6,7,8],
-            backgroundColor: ['green'],
-            borderColor: ['green'],
+            backgroundColor: ['#2cb34a'],
+            borderColor: ['#2cb34a'],
             borderWidth:1,
             order:2,
         },{
