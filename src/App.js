@@ -4,7 +4,7 @@ import AboutUs from "./about-us/AboutUs";
 import Solutions from "./our-solutions/solutions";
 import Contact from "./contact-us/ContactUs";
 import Login from './login/Login';
-import Register from './register/Register';
+import Register from './user-management/register/Register';
 import React from "react";
 import { Routes, BrowserRouter as Router, Route } from "react-router-dom";
 
