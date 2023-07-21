@@ -1,0 +1,62 @@
+.registerScreen {
+    border-radius: 10px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.manualButton{
+    margin:auto;
+    width: 300px;
+    height: 50px;
+
+    background: #2cb34a;
+    border:none;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #ffffff;
+    border-radius: 100px;
+    text-underline: none;
+    align-items: center;
+    justify-content: center;
+
+}
+.popUp{
+    display: flex;
+    z-index: 1;
+}
+.popButton{
+    z-index: 0;
+
+}
+
+.manualTitle{
+    display: flex;
+    justify-content: flex-end;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    color: #2cb34a;
+    margin: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+}
+.content{
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+@media screen and (max-width: 700px) {
+    .content{
+        margin-left: 0;
+        padding: 1px 1px;
+        height: 1000px;
+    }
+}

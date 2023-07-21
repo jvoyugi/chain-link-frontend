@@ -53,3 +53,6 @@
     border: 1px solid darkgrey;
     zIndex: 9999,
 }
+.solution_title{
+    ffont-weight: bold;
+}

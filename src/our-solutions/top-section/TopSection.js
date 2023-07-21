@@ -11,7 +11,7 @@ const TopSection = ({ props }) => {
                 <div className="d-sm-flex align-items-center justify-content-between">
                     <div className="intro-text1 my-5 p-1">
                         <h1>
-                            OUR  <span className="text-warning">PRODUCTS</span>  AND <span className="text-warning">SOLUTIONS </span>
+                            OUR  <span className="solutions_text">PRODUCTS</span>  AND <span className="solutions_text">SOLUTIONS </span>
                         </h1>
 
                         <div className='lead intro-text1 justify-content-between'>

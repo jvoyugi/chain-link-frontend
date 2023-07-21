@@ -1,0 +1,44 @@
+.registerScreen {
+  border-radius: 10px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.dashboardTitle{
+  display: flex;
+  justify-content: flex-end;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 40px;
+  color: #2cb34a;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  margin: 7px;
+}
+.dashBoardCardContent {
+  width: 100%;
+  height: 100%;
+}
+.dashboardApp{
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .dashboardApp{
+    margin-left: 0;
+    padding: 1px 1px;
+    height: 1000px;
+  }
+  .dashboardTitle{
+    padding-top: 0px;
+    margin: 0px;
+  }
+}

@@ -1,0 +1,89 @@
+/* The side navigation menu */
+.sidebar {
+    margin: 0;
+    padding: 5px;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 80%;
+    overflow: auto;
+    font-weight: 500;
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+.logo {
+    padding-left: 5px;
+
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+
+    .logo {
+        width: 5%;
+        height: 5%;
+    }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+/*@media screen and (max-width: 400px) {*/
+/*    .sidebar a {*/
+/*        text-align: center;*/
+/*        float: none;*/
+/*    }*/
+/*}*/
+
+.homeLink {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #02073e;
+    opacity: 0.8;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+@media screen and (max-width: 700px) {
+    .homeLink {
+        padding-bottom: 0px;
+        padding-top: 20px;
+        display: none;
+        font-weight: 100;
+        font-size: 12px;
+    }
+
+}
