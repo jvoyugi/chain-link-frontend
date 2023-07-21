@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import Nav from '../common/Nav';
 import styles from "./Login.module.css";
+import Error from '../common/Error';
 
 const Login = () => {
 
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
+  let [isLoggedIn, setIsLoggedIn] = useState(false);
+  let [hasErrors, setHasErrors] = useState(false);
 
   const handleEmailChange = e => setEmail(e.target.value);
   const handlePasswordChange = e => setPassword(e.target.value);
@@ -26,8 +29,15 @@ const Login = () => {
         },
         body: payload
       })
-      .then(resp => console.log(resp.json()));
+      .then(resp => {
+        if (resp.status === 200) {
+          setIsLoggedIn(true);
+          localStorage.setItem('isLoggedIn', true)
+        } else { setHasErrors(true); }
+      });
   }
+
+  if (isLoggedIn) return <Navigate to="/portal/dashboard" />
 
   return (
     <>
@@ -37,6 +47,9 @@ const Login = () => {
           Sign in to your account
         </div>
         <div className={styles.form}>
+          <div className={styles.loginFormErrors}>
+            {hasErrors ? <Error message="Invalid username or password" /> : null}
+          </div>
           <form className={styles.loginForm}>
             <div className={styles.formField}>
               <input className={styles.formInput} onChange={handleEmailChange} type="text" name="email" id="email" placeholder="Email" required />
