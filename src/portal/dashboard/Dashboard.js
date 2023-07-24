@@ -16,8 +16,9 @@ const DashBoard = () => {
 
     return (
         <>
+            <SideBar navLinkItem="dashboard" />
+
             <div>
-                <SideBar navLinkItem="dashboard"/>
             <div className={styles.dashboardApp} >
 
 

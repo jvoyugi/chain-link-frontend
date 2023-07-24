@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import logo from "../image.svg";
 
-const HamburgerSideBar = ({ navLinkItem }) => {
+const HamburgerSideBar = ({ navLinkItem, handleLogout }) => {
     const [hamburgerMenuVisibility, setHamburgerMenuVisibility] = useState(false);
 
     const toggleVisibility = () => setHamburgerMenuVisibility(!hamburgerMenuVisibility);
@@ -16,7 +16,7 @@ const HamburgerSideBar = ({ navLinkItem }) => {
     const inactiveColor = "#FFFFFF";
 
     return (
-        <>
+        <div className={styles.hamBurgerSidebar}>
             <div className={styles.homeBar}>
                 <div className={navStyles.homeLink}>
                     <img src={logo} alt="Logo" className={styles.logo} />
@@ -27,29 +27,29 @@ const HamburgerSideBar = ({ navLinkItem }) => {
                 </div>
             </div>
             {hamburgerMenuVisibility &&
-            <div className={styles.hamBurgerSidebarMenu}>
-                <div className={styles.hamBurgerSidebarNavLinks}>
+                <div className={styles.hamBurgerSidebarMenu}>
+                    <div className={styles.hamBurgerSidebarNavLinks}>
                         <Link to="/portal/dashboard" className={navStyles.hamburgerNavLinkItem} style={{ color: navLinkItem === "dashboard" ? activeColor : inactiveColor }}><BsFillHouseFill /> DASHBOARD</Link>
-                    <br />
+                        <br />
                         <Link to="/portal/business" className={navStyles.hamburgerNavLinkItem} style={{ color: navLinkItem === "business" ? activeColor : inactiveColor }}><BsFillCloudPlusFill /> BUSINESSES</Link>
-                    <br />
+                        <br />
                         <Link to="/portal/inputs" className={navStyles.hamburgerNavLinkItem} style={{ color: navLinkItem === "inputs" ? activeColor : inactiveColor }}><BsPencil /> TRANSACTIONS</Link>
-                    <br />
+                        <br />
                         <Link to="/other" className={navStyles.hamburgerNavLinkItem} style={{ color: navLinkItem === "other" ? activeColor : inactiveColor }} ><BsPaperclip /> UPDATES</Link>
-                    <br />
+                        <br />
                         <Link to="/other" className={navStyles.hamburgerNavLinkItem} style={{ color: navLinkItem === "other" ? activeColor : inactiveColor }} ><BsFillDatabaseFill /> INVENTORY</Link>
-                    <br />
-                        <Link to="/users" className={navStyles.hamburgerNavLinkItem} style={{ color: navLinkItem === "users" ? activeColor : inactiveColor }}><BsPersonFill /> USERS</Link>
-                    <br />
-                    <button className={styles.hamburgerNavButtonItem}><BsPower /> LOGOUT</button>
-                </div>
-            </div>}
-        </>
+                        <br />
+                        <Link to="/account" className={navStyles.hamburgerNavLinkItem} style={{ color: navLinkItem === "account" ? activeColor : inactiveColor }}><BsPersonFill /> MY ACCOUNT</Link>
+                        <br />
+                        <button className={styles.hamburgerNavButtonItem} onClick={handleLogout}><BsPower /> LOGOUT</button>
+                    </div>
+                </div>}
+        </div>
     )
 }
 
 
-const DesktopSideBar = ({ navLinkItem }) => {
+const DesktopSideBar = ({ navLinkItem, handleLogout }) => {
     const activeColor = "#2CB34A";
     const inactiveColor = "#02073E";
     return (
@@ -66,8 +66,8 @@ const DesktopSideBar = ({ navLinkItem }) => {
                 <Link to="/portal/inputs" style={{ color: navLinkItem === "inputs" ? activeColor : inactiveColor }}><BsPencil /> TRANSACTIONS</Link>
                 <Link to="/other" style={{ color: navLinkItem === "other" ? activeColor : inactiveColor }} ><BsPaperclip /> UPDATES</Link>
                 <Link to="/other" style={{ color: navLinkItem === "other" ? activeColor : inactiveColor }} ><BsFillDatabaseFill /> INVENTORY</Link>
-                <Link to="/users" style={{ color: navLinkItem === "users" ? activeColor : inactiveColor }}><BsPersonFill /> USERS</Link>
-                <button className={styles.logoutButton}><BsPower /> LOGOUT</button>
+                <Link to="/account" style={{ color: navLinkItem === "account" ? activeColor : inactiveColor }}><BsPersonFill /> MY ACCOUNT</Link>
+                <button className={styles.logoutButton} onClick={handleLogout}><BsPower /> LOGOUT</button>
             </div>
         </>
     )
@@ -86,9 +86,22 @@ const SideBar = ({ navLinkItem }) => {
         };
     }, []);
 
+    const handleLogout = async () => {
+        await fetch(`${process.env.REACT_APP_API_URL}/api/auth/logout`,
+            {
+                method: "POST",
+                mode: "cors",
+                credentials: 'include',
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            })
+            .then(resp => { if (resp.ok) window.location.href = "/" });
+    }
+
     return (
         <div className={styles.nav}>
-            {windowSize > 950 ? <DesktopSideBar navLinkItem={navLinkItem} /> : <HamburgerSideBar navLinkItem={navLinkItem} />}
+            {windowSize > 950 ? <DesktopSideBar navLinkItem={navLinkItem} handleLogout={handleLogout} /> : <HamburgerSideBar navLinkItem={navLinkItem} handleLogout={handleLogout} />}
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import Nav from '../common/Nav';
 import styles from "./Login.module.css";
-import Error from '../common/Error';
+import ErrorComponent from '../common/ErrorComponent';
 
 const Login = () => {
 
@@ -24,6 +24,7 @@ const Login = () => {
       {
         method: "POST",
         mode: "cors",
+        credentials: 'include',
         headers: {
           "Content-Type": "application/json",
         },
@@ -48,7 +49,7 @@ const Login = () => {
         </div>
         <div className={styles.form}>
           <div className={styles.loginFormErrors}>
-            {hasErrors ? <Error message="Invalid username or password" /> : null}
+            {hasErrors ? <ErrorComponent message="Invalid username or password" /> : null}
           </div>
           <form className={styles.loginForm}>
             <div className={styles.formField}>
