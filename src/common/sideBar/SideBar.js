@@ -96,7 +96,12 @@ const SideBar = ({ navLinkItem }) => {
                     "Content-Type": "application/json",
                 }
             })
-            .then(resp => { if (resp.ok) window.location.href = "/" });
+            .then(resp => {
+                localStorage.removeItem("isLoggedIn");
+                if (resp.ok) {
+                    window.location.href = "/";
+                }
+            });
     }
 
     return (
