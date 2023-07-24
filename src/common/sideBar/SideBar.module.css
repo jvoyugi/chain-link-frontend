@@ -4,7 +4,6 @@
   padding: 5px;
   width: 200px;
   background-color: #ffffff;
-  position: fixed;
   height: 100%;
   overflow: auto;
   font-weight: 500;
@@ -83,6 +82,7 @@ div.content {
   display: flex;
   flex-direction: row;
   padding: 20px;
+  position: sticky;
 }
 .hamBurgerSidebarNavLinks {
   display: flex;
@@ -91,8 +91,8 @@ div.content {
   margin: auto;
   background-color: #2cb34a;
 }
-.hamburgerNavButtonItem{
-display: block;
+.hamburgerNavButtonItem {
+  display: block;
   padding: 16px;
   text-decoration: none;
   font-weight: 500;
