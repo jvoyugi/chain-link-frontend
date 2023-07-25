@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import { toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 import Nav from '../../common/Nav';
 import styles from "./Register.module.css";
 import { Link } from 'react-router-dom';
@@ -36,7 +37,26 @@ const Register = () => {
           },
           body: payload
         })
-        .then(resp => console.log(resp.json()));
+        .then(resp => resp.ok ? toast.success('Registration Success', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        }) :
+          toast.warn('Registration failed', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          }));
     }
   }
 
