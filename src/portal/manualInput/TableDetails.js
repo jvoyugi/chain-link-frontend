@@ -50,8 +50,8 @@ const TableDetails = () => {
                                 <td>{item.column4}</td>
                                 <td className={styles.tableActions} >
                                     <span className="flex justify-content-around">
-                                        <BsFillTrashFill color="red" className="m-2" onClick={() => setEditPopUp(true)} />
-                                        <BsFillPencilFill color="green" className="m-2" onClick={() => setDeletePopUp(true)} />
+                                        <BsFillPencilFill  color="green" className="m-2" onClick={() => setEditPopUp(true)} />
+                                        <BsFillTrashFill color="red" className="m-2" onClick={() => setDeletePopUp(true)} />
                                     </span>
                                 </td>
                             </tr>
