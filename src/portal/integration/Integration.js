@@ -4,20 +4,13 @@ import TableDetails from "./IntegrationTable";
 import InputPopUp from "./components/IntegrationInputPopUp";
 import PopUp  from "./components/IntegrationPopUp";
 import styles from "./Integration.module.css";
-import SideBar from "../../common/sideBar/SideBar"
+import Layout from '../../common/Layout';
 
 const Integration = () => {
     const[buttonPopUp, setButtonPopUp]= useState(false);
-    return (
+    return (<Layout pageTitle={"Business Information"} navLinkItem={"business"} child={
         <>
             <div>
-                <SideBar navLinkItem="business"/>
-                <div  className={styles.content} >
-                    <div className=" row pt-3 align-items-center d-flex justify-content-end">
-                        <div className="col-md-4 col-lg-3 font-weight-bold flex-item" className={styles.manualTitle}>
-                            Configure Businesses
-                        </div>
-                    </div>
                     <div className="row align-items-center justify-content-end " className={styles.popUp} >
                         <button className="col-md-9" className={styles.manualButton} onClick={()=>setButtonPopUp(true)} > Input New Business</button>
                         <PopUp trigger={buttonPopUp}  setTrigger ={setButtonPopUp} >
@@ -31,13 +24,9 @@ const Integration = () => {
                     </div>
                     <div className="card-content">
                         <TableDetails />
-
-
                     </div>
                 </div>
-            </div>
-
-        </>
+        </>}/>
     )
 };
 export default Integration;
