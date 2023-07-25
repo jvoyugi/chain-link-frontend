@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 import { isStrongPassword } from "validator";
 import loginStyles from "../../login/Login.module.css";
 import styles from "./UpdateForm.module.css";
@@ -47,7 +49,30 @@ const UpdateForm = () => {
         },
         body: JSON.stringify(payload)
       })
-      .then(resp => console.log(resp.json()));
+      .then(resp => {
+        resp.ok ?
+          toast.success('Update Success', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          })
+          :
+          toast.warn('Update failed', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+      });
   }
   useEffect(() => {
     const fetchUser = async () => {
