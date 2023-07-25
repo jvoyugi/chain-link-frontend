@@ -3,7 +3,7 @@ import { Link, Navigate } from 'react-router-dom';
 import Nav from '../common/Nav';
 import styles from "./Login.module.css";
 import ErrorComponent from '../common/ErrorComponent';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
