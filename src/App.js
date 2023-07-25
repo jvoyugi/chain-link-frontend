@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, BrowserRouter as Router, Route } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import Home from './landing/Home';
 import AboutUs from "./about-us/AboutUs";
@@ -15,6 +16,7 @@ import UpdateUser from './user-management/update/UpdateUser';
 function App() {
   return (
     <>
+      <ToastContainer />
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
