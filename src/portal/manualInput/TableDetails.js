@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from "./TableDetails.module.css";
 import DeletePopUp from "./components/DeletePopUp";
 import EditPopUp from "./components/EditPopUp";
 import PopUp from "./components/PopUp";
-import {BsFillPencilFill, BsFillTrashFill} from "react-icons/bs";
+import { BsFillPencilFill, BsFillTrashFill } from "react-icons/bs";
 
 const TableDetails = () => {
 
@@ -25,14 +25,14 @@ const TableDetails = () => {
         { id: 12, column1: '12', column2: 'Supermarket', column3: 'Ksh 45,670', column4: 'Money In' },
     ];
 
-    const[editPopUp, setEditPopUp]= useState(false);
-    const[deletePopUp, setDeletePopUp]= useState(false);
+    const [editPopUp, setEditPopUp] = useState(false);
+    const [deletePopUp, setDeletePopUp] = useState(false);
 
     return (
         <div className="row">
-                <div className="table-responsive">
-                    <table className="table table-bordered table-striped table-hover">
-                        <thead>
+            <div className="table-responsive">
+                <table className="table table-bordered table-striped table-hover">
+                    <thead>
                         <tr>
                             <th>No</th>
                             <th>Description</th>
@@ -40,8 +40,8 @@ const TableDetails = () => {
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
-                        </thead>
-                        <tbody className="flex align-items-center justify-content-center" >
+                    </thead>
+                    <tbody className="flex align-items-center justify-content-center" >
                         {data.map(item => (
                             <tr key={item.id} className="p-1 align-items-center justify-content-center">
                                 <td  >{item.column1}</td>
@@ -50,23 +50,23 @@ const TableDetails = () => {
                                 <td>{item.column4}</td>
                                 <td className={styles.tableActions} >
                                     <span className="flex justify-content-around">
-                                    <BsFillTrashFill color="red" className="m-2" onClick={()=>setEditPopUp(true)} />
-                                    <BsFillPencilFill color="green" className="m-2" onClick={()=>setDeletePopUp(true)}/>
-                                     </span>
+                                        <BsFillTrashFill color="red" className="m-2" onClick={() => setEditPopUp(true)} />
+                                        <BsFillPencilFill color="green" className="m-2" onClick={() => setDeletePopUp(true)} />
+                                    </span>
                                 </td>
                             </tr>
                         ))}
-                        </tbody>
-                    </table>
-       <div>
-           <PopUp trigger={editPopUp}  setTrigger ={setEditPopUp} >
-               <EditPopUp  setTrigger ={setEditPopUp} />
-           </PopUp>
+                    </tbody>
+                </table>
+                <div>
+                    <PopUp trigger={editPopUp} setTrigger={setEditPopUp} >
+                        <EditPopUp setTrigger={setEditPopUp} />
+                    </PopUp>
 
-           <PopUp trigger={deletePopUp}  setTrigger ={setDeletePopUp} >
-               <DeletePopUp  setTrigger ={setDeletePopUp} />
-           </PopUp>
-       </div>
+                    <PopUp trigger={deletePopUp} setTrigger={setDeletePopUp} >
+                        <DeletePopUp setTrigger={setDeletePopUp} />
+                    </PopUp>
+                </div>
             </div>
         </div>
     );
