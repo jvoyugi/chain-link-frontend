@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import { isStrongPassword } from "validator";
-import loginStyles from "../../login/Login.module.css";
+import loginStyles from "../../login/Login.module.css"; 
+import PopUp from '../../portal/manualInput/components/PopUp';
+import DeletePopUp from './DeletePopUp';
 import styles from "./UpdateForm.module.css";
 
 const UpdateForm = () => {
@@ -10,25 +12,13 @@ const UpdateForm = () => {
   let [password, setPassword] = useState("");
   let [passwordConfirmation, setPasswordConfirmation] = useState();
   let [phoneNumber, setPhoneNumber] = useState("");
+  let [deletePopUp, setDeletePopUp] = useState(false);
+
 
   const handleEmailChange = e => setEmail(e.target.value);
   const handlePasswordChange = e => setPassword(e.target.value);
   const handlePasswordConfirmationChange = e => setPasswordConfirmation(e.target.value);
   const handlePhoneNumberChange = e => setPhoneNumber(e.target.value);
-
-  const handleDeleteAccount = async () => {
-    await fetch(`${process.env.REACT_APP_API_URL}/api/users/me`,
-      {
-        method: "DELETE",
-        mode: "cors",
-        credentials: 'include',
-        headers: {
-          "Content-Type": "application/json",
-        }
-      })
-      .then(resp => { if (resp.ok) window.location.href = "/" });
-  }
-
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -112,9 +102,12 @@ const UpdateForm = () => {
         </div>
         <div className={styles.buttonGroup}>
           <button className={styles.submitButton} onClick={handleSubmit} type="submit">Update Account</button>
-          <button className={styles.submitButton} onClick={handleDeleteAccount}>Delete Account</button>
+          <button className={styles.submitButton} onClick={()=>setDeletePopUp(true)}>Delete Account</button>
         </div>
       </form>
+      <PopUp trigger={deletePopUp} setTrigger={setDeletePopUp} >
+        <DeletePopUp setTrigger={setDeletePopUp} />
+      </PopUp>
     </>)
 }
 export default UpdateForm;
