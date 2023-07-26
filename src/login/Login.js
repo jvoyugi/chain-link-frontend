@@ -22,7 +22,6 @@ const Login = () => {
       email: email,
       password: password
     });
-    console.log(process.env.REACT_APP_API_URL);
     await fetch(`${process.env.REACT_APP_API_URL}/api/auth/login`,
       {
         method: "POST",
