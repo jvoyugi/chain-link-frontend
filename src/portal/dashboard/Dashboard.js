@@ -22,21 +22,21 @@ const DashBoard = () => {
                         <div className="box_border position-relative rounded pt-2 pb-2 ">
                             <BsFillArrowUpCircleFill size="4em" color="#2cb34a" />
                             <p>Total Sales</p>
-                            <p className="text-muted text-left text-xl-center text-lg-center"> KSH 5000000</p>
+                            <p className="text-muted text-left text-xl-center text-lg-center"> KSH 85900</p>
                         </div>
                     </div>
                     <div className="col-md-4 col-lg-3 text-center card m-1">
                         <div className="box_border position-relative rounded pt-2 pb-2 ">
                             <BsFillArrowDownCircleFill size="4em" color="orange" />
                             <p>Total Money Out</p>
-                            <p className="text-muted text-left text-xl-center text-lg-center"> KSH 5000000</p>
+                            <p className="text-muted text-left text-xl-center text-lg-center"> KSH 100,000</p>
                         </div>
                     </div>
                     <div className="col-md-4 col-lg-3 text-center card m-1">
                         <div className="box_border position-relative rounded pt-2 pb-2 ">
                             <BsFillArrowDownRightCircleFill size="4em" color="red" />
                             <p>Total Debts</p>
-                            <p className="text-muted text-left text-xl-center text-lg-center"> KSH 5000000</p>
+                            <p className="text-muted text-left text-xl-center text-lg-center"> KSH 4,000</p>
                         </div>
                     </div>
 
