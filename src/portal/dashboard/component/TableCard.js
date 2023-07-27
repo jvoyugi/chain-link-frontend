@@ -36,7 +36,7 @@ const TableCard = () => {
                     <table className="table table-bordered">
                         <thead>
                         <tr>
-                            <th>businessName</th>
+                            <th>Business Name</th>
                             <th>Description</th>
                             <th>Amount</th>
                             <th>Category</th>
