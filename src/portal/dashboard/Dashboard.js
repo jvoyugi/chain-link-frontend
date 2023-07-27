@@ -14,6 +14,9 @@ ChartJs.register(
 
 const DashBoard = () => {
     const [data, setData] = useState([]);
+    const [moneyIn, setMoneyIn] = useState(0);
+    const [moneyOut, setMoneyOut] = useState(0);
+    const [debt, setDebt] = useState(0);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -25,13 +28,29 @@ const DashBoard = () => {
                 });
             if (resp.ok) {
                 setData(await resp.json());
+
+                {data.length > 0 && data.map(item => {
+                    if(item._id === 'Money In'){
+                        setMoneyIn(item.total) ;
+                    }
+                    if(item._id === 'Money Out'){
+                        setMoneyOut(item.total) ;
+                    }
+                    if(item._id === 'Money Out'){
+                        setDebt(item.total);
+                    }
+               })}
+
             }
         }
         let timerId = setTimeout(fetchData, 2000);
         return () => {
             clearTimeout(timerId);
         }
+
     }, [data])
+
+
 
     return (<Layout navLinkItem={"dashboard"} pageTitle={"Dashboard"} child={
         <>
@@ -42,7 +61,7 @@ const DashBoard = () => {
                             <BsFillArrowUpCircleFill size="4em" color="#2cb34a" />
                             <p>Total Sales</p>
                             <p className="text-muted text-left text-xl-center text-lg-center">
-                                {item._id === 'Money In' ? `${item.total}` : '0'}
+                                {moneyIn}
                             </p>
                         </div>
                     </div>
@@ -51,7 +70,7 @@ const DashBoard = () => {
                             <BsFillArrowDownCircleFill size="4em" color="orange" />
                             <p>Total Money Out</p>
                             <p className="text-muted text-left text-xl-center text-lg-center">
-                                {item._id === 'Money Out' ? `${item.total}` : '0'}
+                                {moneyOut}
                             </p>
                         </div>
                     </div>
@@ -60,7 +79,7 @@ const DashBoard = () => {
                             <BsFillArrowDownRightCircleFill size="4em" color="red" />
                             <p>Total Debts</p>
                             <p className="text-muted text-left text-xl-center text-lg-center">
-                                {item._id === 'Debt' ? `${item.total}` : '0'}
+                                {debt}
                             </p>
                         </div>
                     </div>
