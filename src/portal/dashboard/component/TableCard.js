@@ -14,7 +14,7 @@ const TableCard = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            let resp = await fetch(`${process.env.REACT_APP_API_URL}/api/dashboard`,
+            let resp = await fetch(`${process.env.REACT_APP_API_URL}/api/transactions`,
                 {
                     mode: "cors",
                     method: "GET",
