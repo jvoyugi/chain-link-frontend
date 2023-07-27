@@ -27,7 +27,7 @@ const Data = [
     {
         scardimage: product_image,
         scardtitle : "Our story",
-        scarddesc: "story",
+        scarddesc: "Our primary goal is to keep a firm afloat and ultimately to drive it to success. Other objectives of SCM include improving efficiency and quality, minimising costs, optimising delivery and distribution and providing the best possible experience to your customers.",
     },
     {
         scardimage: product_image,
@@ -38,7 +38,7 @@ const Data = [
     {
         scardimage: product_image,
         scardtitle : "Our vision",
-        scarddesc: "vision statement",
+        scarddesc: "Our primary goal is to keep a firm afloat and ultimately to drive it to success. Other objectives of SCM include improving efficiency and quality, minimising costs, optimising delivery and distribution and providing the best possible experience to your customers.",
     },
 
 
