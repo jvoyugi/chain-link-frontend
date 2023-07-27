@@ -12,6 +12,7 @@ import Dashboard from "./portal/dashboard/Dashboard";
 import ManualInput from "./portal/manualInput/ManualInput";
 import Integration from "./portal/integration/Integration";
 import UpdateUser from './user-management/update/UpdateUser';
+import Inventory from "./portal/inventory/Inventory";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/portal/business" element={<Integration />} />
           <Route path="/portal/inputs" element={<ManualInput />} />
           <Route path="/account" element={<UpdateUser/>} />
+          <Route path="/inventory" element={<Inventory />} />
         </Routes>
       </Router>
     </>

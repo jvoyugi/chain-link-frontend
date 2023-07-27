@@ -44,9 +44,9 @@ const TableCard = () => {
                         </thead>
                         <tbody>
                         {data.length > 0 && data.map(item => (
-                            <tr key={item.id}>
+                            <tr key={item._id}>
                                 {/*<td>{item.description}</td>*/}
-                                <td>{item.businessName}</td>
+                                <td>{item.businessName.businessName}</td>
                                 <td>{item.description}</td>
                                 <td>{item.amount}</td>
                                 <td>{item.status}</td>

@@ -15,7 +15,7 @@ const TableDetails = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            let resp = await fetch(`${process.env.REACT_APP_API_URL}/api/transactions`,
+            let resp = await fetch(`${process.env.REACT_APP_API_URL}/api/inventory`,
                 {
                     mode: "cors",
                     method: "GET",
@@ -37,20 +37,20 @@ const TableDetails = () => {
                 <table className="table table-bordered table-striped table-hover">
                     <thead>
                         <tr>
+                            <th>Name</th>
                             <th>Business</th>
-                            <th>Description</th>
-                            <th>Amount</th>
-                            <th>Status</th>
+                            <th>Quantity</th>
+                            <th>Cost</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody className="flex align-items-center justify-content-center" >
                         {data.length > 0 && data.map(item => (
                             <tr key={item._id} className="p-1 align-items-center justify-content-center">
+                                <td>{item.name}</td>
                                 <td>{item.businessName.businessName}</td>
-                                <td>{item.description}</td>
-                                <td>{item.amount}</td>
-                                <td>{item.status}</td>
+                                <td>{item.quantity}</td>
+                                <td>{item.cost * item.quantity}</td>
                                 <td className={styles.tableActions} >
                                     <span className="flex justify-content-around">
                                         <BsFillPencilFill color="red" className="m-2" onClick={() => { setEditPopUp(true); setSelectedItem(item) }} />

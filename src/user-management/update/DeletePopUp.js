@@ -2,7 +2,6 @@ import React from 'react';
 import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import styles from "./DeletePopUp.module.css";
-import loginStyles from "../../login/Login.module.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const DeletePopUp = (props) => {

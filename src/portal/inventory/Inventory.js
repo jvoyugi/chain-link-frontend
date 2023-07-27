@@ -4,10 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import TableDetails from "./TableDetails";
 import InputPopUp from "./components/InputPopUp";
 import PopUp from "./components/PopUp";
-import styles from "./ManualInput.module.css";
+import styles from "./Inventory.module.css";
 import Layout from '../../common/Layout';
 
-const ManualInput = () => {
+const Inventory = () => {
     const [buttonPopUp, setButtonPopUp] = useState(false);
     const [businesses, setBusinesses] = useState([]);
 
@@ -26,18 +26,19 @@ const ManualInput = () => {
         (async () => await fetchBusinesses())();
         return () => { }
     }, []);
-    return (<Layout pageTitle={"Manual Input"} navLinkItem={"inputs"} child={
+
+    return (<Layout pageTitle={"Inventory"} navLinkItem={"inventory"} child={
         <>
             <div>
                 <div className="row align-items-center justify-content-end " className={styles.popUp} >
-                    <button className="col-md-9" className={styles.manualButton} onClick={() => setButtonPopUp(true)} > Input transactions manually</button>
+                    <button className="col-md-9" className={styles.manualButton} onClick={() => setButtonPopUp(true)} >Add item</button>
                     <PopUp trigger={buttonPopUp} setTrigger={setButtonPopUp} >
-                        <InputPopUp setTrigger={setButtonPopUp} businesses={businesses} />
+                        <InputPopUp setTrigger={setButtonPopUp} businesses={businesses}/>
                     </PopUp>
                 </div>
                 <div className=" row justify-content-right pt-5">
                     <div className="text-right text-success font-weight-bold" className={styles.dashboardTitle}>
-                        <h2 className="card-title">Recent Transactions</h2>
+                        <h2 className="card-title">Inventory</h2>
                     </div>
                 </div>
                 <div className="card-content">
@@ -47,4 +48,4 @@ const ManualInput = () => {
         </>} />
     )
 };
-export default ManualInput;
+export default Inventory;

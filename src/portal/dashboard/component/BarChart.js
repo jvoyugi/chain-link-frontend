@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Bar } from "react-chartjs-2";
 import {
     Chart as ChartJs,
@@ -17,52 +17,73 @@ ChartJs.register(
     Legend
 )
 const BarChart = () => {
+    const [barData, setBarData] = useState();
+    useEffect(() => {
+        const fetchData = async () => {
+            let resp = await fetch(`${process.env.REACT_APP_API_URL}/api/dashboard/sales/summary`,
+                {
+                    mode: "cors",
+                    method: "GET",
+                    credentials: "include"
+                });
+            if (resp.ok) {
+                let jsonResp = await resp.json();
+                let moneyIn = [];
+                let moneyOut = [];
+                let debts = [];
+                let businessNames = [];
+                jsonResp.forEach(element => {
+                    businessNames.push(element.name);
+                    moneyIn.push(element.status.hasOwnProperty("Money In") ? element.status["Money In"] : 0);
+                    moneyOut.push(element.status.hasOwnProperty("Money Out") ? element.status["Money Out"] : 0);
+                    debts.push(element.status.hasOwnProperty("Debt") ? element.status["Debt"] : 0);
+                });
 
-    const data = {
-        labels: ['Bank','Mpesa', 'Cash','Shop','Warehouse', 'Supermarket','July'],
-        datasets: [{
-            label: 'MoneyIn',
-            data: [3, 6,4,5,6,7,8],
-            backgroundColor: ['#2cb34a'],
-            borderColor: ['#2cb34a'],
-            borderWidth:1,
-            order:2,
-        },{
-            label: 'MoneyOut',
-            data: [3, 6,4,5,6,7,8],
-            backgroundColor: ['orange'],
-            borderColor: ['orange'],
-            borderWidth:1,
-            order:2,
-        },{
-            label: 'Debts',
-            data: [3, 6,4,5,6,7,8],
-            backgroundColor: ['red'],
-            borderColor: ['red'],
-            borderWidth:1,
-            order:2,
-        },{
-            label: 'Average Sales',
-            data: [3, 6,4,5,6,7,8],
-            backgroundColor: ['black'],
-            borderColor: ['black'],
-            tension:0.5,
-            type:'line',
-            order:1,
-        }]
-    }
+                setBarData({
+                    labels: businessNames,
+                    datasets: [{
+                        label: 'Money In',
+                        data: moneyIn,
+                        backgroundColor: ['#2cb34a'],
+                        borderColor: ['#2cb34a'],
+                        borderWidth: 1,
+                        order: 2,
+                    }, {
+                        label: 'Money Out',
+                        data: moneyOut,
+                        backgroundColor: ['orange'],
+                        borderColor: ['orange'],
+                        borderWidth: 1,
+                        order: 2,
+                    }, {
+                        label: 'Debt',
+                        data: debts,
+                        backgroundColor: ['red'],
+                        borderColor: ['red'],
+                        borderWidth: 1,
+                        order: 2,
+                    }]
+                });
+            }
+        }
+        let timerId = setTimeout(fetchData, 2000);
+        return () => {
+            clearTimeout(timerId);
+        }
+
+    }, [barData])
 
     const Options = {
-        plugins:{
-            legend:false
+        plugins: {
+            legend: false
         },
-        scale:{
-            x:{
-                stacked:true
+        scale: {
+            x: {
+                stacked: true
             },
-            y:{
-                beginAtZero:true,
-                stacked:true
+            y: {
+                beginAtZero: true,
+                stacked: true
             },
 
         }
@@ -71,10 +92,10 @@ const BarChart = () => {
     return (
         <>
             <div >
-                <Bar data={data} options={Options} />
+                {barData && <Bar data={barData} options={Options} />}
             </div>
 
         </>
     )
 };
-export default BarChart ;
+export default BarChart;

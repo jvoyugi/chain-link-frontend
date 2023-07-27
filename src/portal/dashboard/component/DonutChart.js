@@ -1,66 +1,19 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import { Doughnut } from "react-chartjs-2";
 
-const DonutChart = (chartData) => {
+const DonutChart = (props) => {
 
-    // const [data, setData] = useState([]);
-    const [data1, setData1] = useState([]);
-    const [moneyIn, setMoneyIn] = useState(0);
-    const [moneyOut, setMoneyOut] = useState(0);
-    const [debt, setDebt] = useState(0);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            let resp = await fetch(`${process.env.REACT_APP_API_URL}/api/dashboard/sales`,
-                {
-                    mode: "cors",
-                    method: "GET",
-                    credentials: "include"
-                });
-            if (resp.ok) {
-                setData1(await resp.json());
-
-                {data1.length > 0 && data1.map(item => {
-                    if(item._id === 'Money In'){
-                        setMoneyIn(item.total) ;
-                    }
-                    if(item._id === 'Money Out'){
-                        setMoneyOut(item.total) ;
-                    }
-                    if(item._id === 'Debt'){
-                        setDebt(item.total);
-                    }
-                })}
-
-                // data = {
-                //     labels: ['MoneyIn', 'MoneyOut', 'Debts'],
-                //     datasets: [{
-                //         label: 'Poll',
-                //         data: [{moneyIn},{moneyOut},{debt}],
-                //         backgroundColor: ['black', 'red','#2cb34a'],
-                //         borderColor: ['black', 'red','#2cb34a'],
-                //     }]
-                // }
-
-            }
-        }
-        let timerId = setTimeout(fetchData, 2000);
-        return () => {
-            clearTimeout(timerId);
-        }
-
-    }, [data1])
-
-     const data = {
-        labels: ['MoneyIn', 'MoneyOut', 'Debts'],
+    let salesData = props.data;
+    const data = {
+        labels: ["Money In", "Money Out", "Debt"],
         datasets: [{
-            label: 'Poll',
-            data: [3,10, 15],
-            backgroundColor: ['black', 'red','#2cb34a'],
-            borderColor: ['black', 'red','#2cb34a'],
+            label: 'KES',
+            data: [salesData["Money In"], salesData["Money Out"], salesData["Debt"]],
+            backgroundColor: ["#2cb34a", 'red', 'black'],
+            borderColor: ['#2cb34a', 'red', 'black'],
         }]
+    };
 
-    }
 
     const Options = {};
 
@@ -73,4 +26,4 @@ const DonutChart = (chartData) => {
         </>
     )
 };
-export default DonutChart ;
+export default DonutChart;

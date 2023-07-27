@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Chart as ChartJs, ArcElement, Tooltip, Legend } from 'chart.js';
 import styles from "./Dashboard.module.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -28,19 +28,9 @@ const DashBoard = () => {
                 });
             if (resp.ok) {
                 setData(await resp.json());
-
-                {data.length > 0 && data.map(item => {
-                    if(item._id === 'Money In'){
-                        setMoneyIn(item.total) ;
-                    }
-                    if(item._id === 'Money Out'){
-                        setMoneyOut(item.total) ;
-                    }
-                    if(item._id === 'Debt'){
-                        setDebt(item.total);
-                    }
-               })}
-
+                setMoneyIn(data["Money In"] || 0);
+                setMoneyOut(data["Money Out"] || 0);
+                setDebt(data["Debt"] || 0);
             }
         }
         let timerId = setTimeout(fetchData, 2000);
@@ -117,7 +107,7 @@ const DashBoard = () => {
                     <div className="col card m-2">
                         <h2 className="card-title">Overall Comparison</h2>
                         <div className="card-content" className={styles.dashBoardCardContent}>
-                            <DonutChart />
+                            {data && <DonutChart data={data} />}
                         </div>
                     </div>
                 </div>

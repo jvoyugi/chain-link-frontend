@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import styles from "./InputPopUp.module.css";
@@ -7,14 +7,15 @@ const InputPopUp = (props) => {
 
     const [amount, setAmount] = useState("");
     const [description, setDescription] = useState("");
-    const [status, setStatus] = useState("");
-    const [businessName, setBusinessName] = useState("");
+    const [status, setStatus] = useState("Money In");
+    const [businessName, setBusinessName] = useState(props.businesses[0].businessName);
 
 
     const handleAmount = e => setAmount(e.target.value);
     const handleDescription = e => setDescription(e.target.value);
-    const handleStatus = e => setStatus(e.target.value);
+    const handleStatus = e => { setStatus(e.target.value) };
     const handleBusinessName = e => setBusinessName(e.target.value);
+
 
     const handleSubmit = async e => {
         e.preventDefault();
@@ -61,8 +62,6 @@ const InputPopUp = (props) => {
                 }
             });
     }
-
-
     return (
         <>
             <div className={styles.loginScreen}>
@@ -74,7 +73,19 @@ const InputPopUp = (props) => {
                     <form className={styles.loginForm}>
                         <span className={styles.field}>Business</span>
                         <div className={styles.formField}>
-                            <input className={styles.formInput} onChange={handleBusinessName} type="text" name="business" id="business" placeholder="business" required />
+                            <select
+                                className={styles.formInput}
+                                onChange={handleBusinessName}
+                                name="type"
+                                id="business"
+                                value={businessName}
+                                
+                            >
+                                {props.businesses.length > 0 && props.businesses.map(element =>
+                                    <option key={element._id} value={element.businessName}>{element.businessName}</option>
+                                )}
+                            </select>
+
                         </div>
                         <span className={styles.field}>Received via</span>
                         <div className={styles.formField}>
@@ -86,15 +97,14 @@ const InputPopUp = (props) => {
                         </div>
                         <span className={styles.field}>Type</span>
                         <div className={styles.formField}>
-                            {/*<input className={styles.formInput} onChange={handleStatus} type="text" name="type" id="password" placeholder="Type: Money in, money out, debt" required />*/}
                             <select
                                 className={styles.formInput}
                                 onChange={handleStatus}
                                 name="type"
-                                id="password"
-                                defaultValue="Money In" // Set the default selected value here
+                                id="status"
+                                value={status}
                             >
-                                <option value="Money In">Money In</option> {/* Corrected 'value' attribute */}
+                                <option value="Money In">Money In</option>
                                 <option value="Money Out">Money Out</option>
                                 <option value="Debt">Debt</option>
                             </select>
