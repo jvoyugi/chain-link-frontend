@@ -37,6 +37,7 @@ const TableDetails = () => {
                 <table className="table table-bordered table-striped table-hover">
                     <thead>
                         <tr>
+                            <th>Business</th>
                             <th>Description</th>
                             <th>Amount</th>
                             <th>Status</th>
@@ -46,7 +47,8 @@ const TableDetails = () => {
                     <tbody className="flex align-items-center justify-content-center" >
                         {data.length > 0 && data.map(item => (
                             <tr key={item._id} className="p-1 align-items-center justify-content-center">
-                                <td  >{item.description}</td>
+                                <td>{item.businessName.businessName}</td>
+                                <td>{item.description}</td>
                                 <td>{item.amount}</td>
                                 <td>{item.status}</td>
                                 <td className={styles.tableActions} >

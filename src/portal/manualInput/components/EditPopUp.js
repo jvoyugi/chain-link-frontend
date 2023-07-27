@@ -77,7 +77,18 @@ const EditPopUp= (props) => {
                         </div>
                         <span className={styles.field}>Status</span>
                         <div className={styles.formField}>
-                            <input className={styles.formInput} value={status} onChange={handleStatus} type="text" name="amount" id="amount" placeholder="status" required />
+                            <select
+                                className={styles.formInput}
+                                onChange={handleStatus}
+                                name="type"
+                                id="status"
+                                value={status}
+                            >
+                                <option value="Money In">Money In</option>
+                                <option value="Money Out">Money Out</option>
+                                <option value="Debt">Debt</option>
+                            </select>
+
                         </div>
                         <div className={styles.loginButton}>
                             <button className={styles.submitButton} onClick={handleSubmit}type="submit">Edit</button>
