@@ -34,9 +34,6 @@ const HamburgerSideBar = ({ navLinkItem, handleLogout }) => {
                         <Link to="/portal/business" className={navStyles.hamburgerNavLinkItem} style={{ color: navLinkItem === "business" ? activeColor : inactiveColor }}><BsFillCloudPlusFill /> BUSINESSES</Link>
                         <br />
                         <Link to="/portal/inputs" className={navStyles.hamburgerNavLinkItem} style={{ color: navLinkItem === "inputs" ? activeColor : inactiveColor }}><BsPencil /> TRANSACTIONS</Link>
-                        <br />
-                        <Link to="/other" className={navStyles.hamburgerNavLinkItem} style={{ color: navLinkItem === "other" ? activeColor : inactiveColor }} ><BsPaperclip /> UPDATES</Link>
-                        <br />
                         <Link to="/other" className={navStyles.hamburgerNavLinkItem} style={{ color: navLinkItem === "other" ? activeColor : inactiveColor }} ><BsFillDatabaseFill /> INVENTORY</Link>
                         <br />
                         <Link to="/account" className={navStyles.hamburgerNavLinkItem} style={{ color: navLinkItem === "account" ? activeColor : inactiveColor }}><BsPersonFill /> MY ACCOUNT</Link>
@@ -64,7 +61,6 @@ const DesktopSideBar = ({ navLinkItem, handleLogout }) => {
                 <Link to="/portal/dashboard" style={{ color: navLinkItem === "dashboard" ? activeColor : inactiveColor }}><BsFillHouseFill /> DASHBOARD</Link>
                 <Link to="/portal/business" style={{ color: navLinkItem === "business" ? activeColor : inactiveColor }}><BsFillCloudPlusFill /> BUSINESSES</Link>
                 <Link to="/portal/inputs" style={{ color: navLinkItem === "inputs" ? activeColor : inactiveColor }}><BsPencil /> TRANSACTIONS</Link>
-                <Link to="/other" style={{ color: navLinkItem === "other" ? activeColor : inactiveColor }} ><BsPaperclip /> UPDATES</Link>
                 <Link to="/other" style={{ color: navLinkItem === "other" ? activeColor : inactiveColor }} ><BsFillDatabaseFill /> INVENTORY</Link>
                 <Link to="/account" style={{ color: navLinkItem === "account" ? activeColor : inactiveColor }}><BsPersonFill /> MY ACCOUNT</Link>
                 <button className={styles.logoutButton} onClick={handleLogout}><BsPower /> LOGOUT</button>
