@@ -24,7 +24,7 @@ const TableCard = () => {
                 setData(await resp.json());
             }
         }
-        let timerId = setTimeout(fetchData, 2000);
+        let timerId = setTimeout(fetchData, 1000);
         return () => {
             clearTimeout(timerId);
         }

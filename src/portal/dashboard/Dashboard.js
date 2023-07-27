@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Chart as ChartJs, ArcElement, Tooltip, Legend } from 'chart.js';
 import styles from "./Dashboard.module.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,6 +13,25 @@ ChartJs.register(
 );
 
 const DashBoard = () => {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            let resp = await fetch(`${process.env.REACT_APP_API_URL}/api/dashboard/sales`,
+                {
+                    mode: "cors",
+                    method: "GET",
+                    credentials: "include"
+                });
+            if (resp.ok) {
+                setData(await resp.json());
+            }
+        }
+        let timerId = setTimeout(fetchData, 2000);
+        return () => {
+            clearTimeout(timerId);
+        }
+    }, [data])
 
     return (<Layout navLinkItem={"dashboard"} pageTitle={"Dashboard"} child={
         <>
@@ -22,21 +41,27 @@ const DashBoard = () => {
                         <div className="box_border position-relative rounded pt-2 pb-2 ">
                             <BsFillArrowUpCircleFill size="4em" color="#2cb34a" />
                             <p>Total Sales</p>
-                            <p className="text-muted text-left text-xl-center text-lg-center"> KSH 85900</p>
+                            <p className="text-muted text-left text-xl-center text-lg-center">
+                                {item._id === 'Money In' ? `${item.total}` : '0'}
+                            </p>
                         </div>
                     </div>
                     <div className="col-md-4 col-lg-3 text-center card m-1">
                         <div className="box_border position-relative rounded pt-2 pb-2 ">
                             <BsFillArrowDownCircleFill size="4em" color="orange" />
                             <p>Total Money Out</p>
-                            <p className="text-muted text-left text-xl-center text-lg-center"> KSH 100,000</p>
+                            <p className="text-muted text-left text-xl-center text-lg-center">
+                                {item._id === 'Money Out' ? `${item.total}` : '0'}
+                            </p>
                         </div>
                     </div>
                     <div className="col-md-4 col-lg-3 text-center card m-1">
                         <div className="box_border position-relative rounded pt-2 pb-2 ">
                             <BsFillArrowDownRightCircleFill size="4em" color="red" />
                             <p>Total Debts</p>
-                            <p className="text-muted text-left text-xl-center text-lg-center"> KSH 4,000</p>
+                            <p className="text-muted text-left text-xl-center text-lg-center">
+                                {item._id === 'Debt' ? `${item.total}` : '0'}
+                            </p>
                         </div>
                     </div>
 

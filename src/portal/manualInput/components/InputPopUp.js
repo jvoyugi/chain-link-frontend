@@ -86,8 +86,21 @@ const InputPopUp = (props) => {
                         </div>
                         <span className={styles.field}>Type</span>
                         <div className={styles.formField}>
-                            <input className={styles.formInput} onChange={handleStatus} type="text" name="type" id="password" placeholder="Type: Money in, money out, debt" required />
+                            {/*<input className={styles.formInput} onChange={handleStatus} type="text" name="type" id="password" placeholder="Type: Money in, money out, debt" required />*/}
+                            <select
+                                className={styles.formInput}
+                                onChange={handleStatus}
+                                name="type"
+                                id="password"
+                                defaultValue="Money In" // Set the default selected value here
+                            >
+                                <option value="Money In">Money In</option> {/* Corrected 'value' attribute */}
+                                <option value="Money Out">Money Out</option>
+                                <option value="Debt">Debt</option>
+                            </select>
+
                         </div>
+
 
                         <div className={styles.loginButton}>
                             <button className={styles.submitButton} onClick={handleSubmit} type="submit">Submit</button>
