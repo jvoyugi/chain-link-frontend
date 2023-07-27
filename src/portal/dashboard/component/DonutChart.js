@@ -55,7 +55,7 @@ const DonutChart = (chartData) => {
         labels: ['MoneyIn', 'MoneyOut', 'Debts'],
         datasets: [{
             label: 'Poll',
-            data: [{moneyIn},{moneyOut}, {debt}],
+            data: [3,10, 15],
             backgroundColor: ['black', 'red','#2cb34a'],
             borderColor: ['black', 'red','#2cb34a'],
         }]
