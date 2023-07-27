@@ -14,6 +14,7 @@ const DonutChart = (props) => {
         }]
     };
 
+
     const Options = {};
 
     return (
