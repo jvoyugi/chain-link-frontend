@@ -36,7 +36,7 @@ const DashBoard = () => {
                     if(item._id === 'Money Out'){
                         setMoneyOut(item.total) ;
                     }
-                    if(item._id === 'Money Out'){
+                    if(item._id === 'Debt'){
                         setDebt(item.total);
                     }
                })}
