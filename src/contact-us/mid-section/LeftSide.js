@@ -9,12 +9,12 @@ export const LeftSide = () => {
     return (
         <div className={styles.section}>
             <div className={styles.sectionHeader}>
-                We are looking forward to start a project with you
+                We are looking forward to get a review
             </div>
             <div className={styles.sectionBody}>
-                Our strong team allows us to successfully initiate,
-                execute and commission multi-disciplinary projects
-                spanning all aspects of engineering. We have a solution for you!
+                Our solution allows you to track expenses, manage debts,
+                track inventory among others. We'll even give a summary of
+                your business performance! Try it today.
             </div>
             <div className={styles.sectionFooter}>
                 <div className={styles.sectionFooterRow}>
