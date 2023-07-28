@@ -49,7 +49,7 @@ const TableDetails = () => {
                         {data.length > 0 && data.map(item => (
                             <tr key={item._id} className="p-1 align-items-center justify-content-center">
                                 <td>{item.name}</td>
-                                <td>{item.businessName.businessName}</td>
+                                <td>{item.businessName?.businessName}</td>
                                 <td>{item.quantity}</td>
                                 <td>{item.cost * item.quantity}</td>
                                 <td className={styles.tableActions} >
