@@ -14,9 +14,9 @@ ChartJs.register(
 
 const DashBoard = () => {
     const [data, setData] = useState([]);
-    const [moneyIn, setMoneyIn] = useState(0);
-    const [moneyOut, setMoneyOut] = useState(0);
-    const [debt, setDebt] = useState(0);
+    const [moneyIn, setMoneyIn] = useState("Loading...");
+    const [moneyOut, setMoneyOut] = useState("Loading...");
+    const [debt, setDebt] = useState("Loading...");
 
     useEffect(() => {
         const fetchData = async () => {
