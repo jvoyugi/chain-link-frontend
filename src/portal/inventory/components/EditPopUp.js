@@ -8,7 +8,7 @@ const EditPopUp = (props) => {
     const [cost, setCost] = useState(props.selectedItem.cost);
     const [name, setName] = useState(props.selectedItem.name);
     const [businesses, setBusinesses] = useState([]);
-    const [businessName, setBusinessName] = useState(props.selectedItem.businessName.businessName);
+    const [businessName, setBusinessName] = useState(props.selectedItem.businessName?.businessName);
 
 
 
