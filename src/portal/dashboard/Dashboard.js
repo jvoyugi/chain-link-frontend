@@ -27,10 +27,11 @@ const DashBoard = () => {
                     credentials: "include"
                 });
             if (resp.ok) {
-                setData(await resp.json());
-                setMoneyIn(data["Money In"] || 0);
-                setMoneyOut(data["Money Out"] || 0);
-                setDebt(data["Debt"] || 0);
+                const response = await resp.json();
+                setData(response);
+                setMoneyIn(response["Money In"] || 0);
+                setMoneyOut(response["Money Out"] || 0);
+                setDebt(response["Debt"] || 0);
             }
         }
         let timerId = setTimeout(fetchData, 2000);

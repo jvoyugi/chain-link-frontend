@@ -22,7 +22,8 @@ const IntegrationTable = () => {
                     credentials: "include"
                 });
             if (resp.ok) {
-                setData(await resp.json());
+                let jsonResponse = await resp.json();
+                setData(jsonResponse);
             }
         }
         let timerId = setTimeout(fetchData, 2000);
