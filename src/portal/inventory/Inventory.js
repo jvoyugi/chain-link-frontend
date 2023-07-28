@@ -20,7 +20,8 @@ const Inventory = () => {
                     credentials: "include"
                 })
             if (response.ok) {
-                setBusinesses(await response.json())
+                let jsonResponse = await response.json();
+                setBusinesses(jsonResponse);
             }
         }
         (async () => await fetchBusinesses())();

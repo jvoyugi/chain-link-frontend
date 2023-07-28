@@ -27,8 +27,9 @@ const InputPopUp = (props) => {
                     credentials: "include"
                 })
             if (response.ok) {
-                setBusinesses(await response.json())
-                setBusinessName(businesses[0].businessName)
+                let jsonResponse = await response.json();
+                setBusinesses(jsonResponse)
+                setBusinessName(jsonResponse[0].businessName)
             }
             else {
                 toast.error(

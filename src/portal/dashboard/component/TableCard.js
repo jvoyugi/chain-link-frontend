@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const TableCard = () => {
@@ -21,7 +21,8 @@ const TableCard = () => {
                     credentials: "include"
                 });
             if (resp.ok) {
-                setData(await resp.json());
+                const jsonResponse = await resp.json();
+                setData(jsonResponse);
             }
         }
         let timerId = setTimeout(fetchData, 1000);
@@ -32,17 +33,17 @@ const TableCard = () => {
 
     return (
         <div className="row">
-                <div className="table-responsive">
-                    <table className="table table-bordered">
-                        <thead>
+            <div className="table-responsive">
+                <table className="table table-bordered">
+                    <thead>
                         <tr>
                             <th>Business Name</th>
                             <th>Description</th>
                             <th>Amount</th>
                             <th>Category</th>
                         </tr>
-                        </thead>
-                        <tbody>
+                    </thead>
+                    <tbody>
                         {data.length > 0 && data.map(item => (
                             <tr key={item._id}>
                                 {/*<td>{item.description}</td>*/}
@@ -52,9 +53,9 @@ const TableCard = () => {
                                 <td>{item.status}</td>
                             </tr>
                         ))}
-                        </tbody>
-                    </table>
-                </div>
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };

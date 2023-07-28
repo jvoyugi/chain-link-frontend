@@ -27,7 +27,8 @@ const EditPopUp = (props) => {
                     credentials: "include"
                 })
             if (response.ok) {
-                setBusinesses(await response.json())
+                let jsonResponse = await response.json();
+                setBusinesses(jsonResponse)
             }
             else {
                 toast.error(
